@@ -1,0 +1,10 @@
+﻿Build lại 2 project 
+ + 2DFramework for Editor
+ + GameDemo
+Đảm bảo là GameDemo chạy được dưới dạng Application (.Exe)
+
+Chuyển config GameDemo sang build dll -> ra 2 file là Game.dll và Game.lib
+
+Vào thư mục SpriteEditor -> Copy vô 2 file trên vào Win32
+Build lại và chạy chương trình 
+-> Enjoy or trying fix project :v

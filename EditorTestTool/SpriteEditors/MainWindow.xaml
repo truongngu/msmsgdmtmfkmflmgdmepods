@@ -1,0 +1,55 @@
+﻿<Window x:Class="SpriteEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:wpg="clr-namespace:System.Windows.Controls"
+        Title="MainWindow" Height="600" Width="1000" Loaded="Window_Loaded" Closing="Window_Closing" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="grdMenu">
+            <Menu HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="500">
+                <MenuItem Header="File">
+                    <Label MouseUp="Label_MouseUp">New Project</Label>
+                    <Label>Open Project</Label>
+                    <Label>Close Project</Label>
+                </MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblRender" Grid.Column="0" BorderBrush="Black" BorderThickness="1" 
+                   MouseUp="lblRender_MouseUp"
+                   MouseMove="lblRender_MouseMove"
+                   MouseDown="lblRender_MouseDown"
+                   Background="Black"
+                   SizeChanged="lblRender_SizeChanged"></Label>
+            <TextBox Grid.Column="1" 
+                     x:Name="txtConfig"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     HorizontalScrollBarVisibility="Visible"
+                     VerticalScrollBarVisibility="Visible"
+                     >abc</TextBox>
+            <wpg:WpfPropertyGrid x:Name="propertiGrid"  Grid.Column="2"
+                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                              HelpVisible="{Binding ElementName=ShowDescrip, Path=IsChecked}" 
+                              ToolbarVisible="{Binding ElementName=ShowToolbar, Path=IsChecked}"
+                              PropertySort="{Binding ElementName=ComboSort, Path=SelectedItem}" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnUpdate" Margin="10" Click="Button_Click">Update</Button>
+        </Grid>
+    </Grid>
+</Window>
