@@ -1,0 +1,273 @@
+﻿Build started 1/8/2015 11:30:19 PM.
+     1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\ATI" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\Sound\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\Vorbis\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\Freetype" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\Freetype\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Include\Box2D" /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ..\Source\AnimatedSprite.cpp ..\Source\AnimatedSpritePhysics.cpp ..\Source\BaseCamera.cpp ..\Source\Camera.cpp ..\Source\Entity2D.cpp ..\Source\EntityFactory.cpp ..\Source\FPSLimitter.cpp ..\Source\Game.cpp ..\Source\Global.cpp ..\Source\InputHandler.cpp ..\Source\LookAtCamera.cpp ..\Source\Main.cpp ..\Source\Mesh2D.cpp ..\Source\Model2D.cpp ..\Source\PathFinder.cpp ..\Source\RectangleMesh.cpp ..\Source\Resource.cpp ..\Source\ResourceManager.cpp ..\Source\Shader.cpp ..\Source\SoundManager.cpp ..\Source\Sprite.cpp ..\Source\State.cpp ..\Source\StateConfig.cpp ..\Source\StateManager.cpp ..\Source\TextRenderer.cpp ..\Source\Texture.cpp ..\Source\Utils.cpp
+         Utils.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Utils.cpp(422): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\Source\Utils.cpp(423): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\Source\Utils.cpp(424): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Utils.cpp(433): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>..\Source\Utils.cpp(454): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\Source\Utils.cpp(456): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\Source\Utils.cpp(457): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\Source\Utils.cpp(483): warning C4244: 'return' : conversion from 'clock_t' to 'float', possible loss of data
+     1>..\Source\Utils.cpp(493): warning C4244: 'argument' : conversion from 'float' to 'DWORD', possible loss of data
+         Texture.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         TextRenderer.cpp
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\TextRenderer.cpp(62): warning C4244: 'argument' : conversion from 'float' to 'FT_UInt', possible loss of data
+     1>..\Source\TextRenderer.cpp(325): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>..\Source\TextRenderer.cpp(326): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>..\Source\TextRenderer.cpp(327): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\TextRenderer.cpp(328): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+         StateManager.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\StateManager.cpp(18): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\StateManager.cpp(86): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         StateConfig.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\StateConfig.cpp(15): warning C4101: 'numEntity' : unreferenced local variable
+         State.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\State.cpp(22): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\State.cpp(36): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\State.cpp(52): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\State.cpp(98): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         Sprite.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Sprite.cpp(95): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Sprite.cpp(128): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLint', possible loss of data
+     1>..\Source\Sprite.cpp(132): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLint', possible loss of data
+         SoundManager.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\SoundManager.cpp(170): warning C4101: 'size' : unreferenced local variable
+         Shader.cpp
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>..\Source\Shader.cpp(200): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\Source\Shader.cpp(201): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+         ResourceManager.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\ResourceManager.cpp(107): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         Resource.cpp
+         RectangleMesh.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         PathFinder.cpp
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\PathFinder.cpp(15): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(16): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(73): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>..\Source\PathFinder.cpp(166): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(191): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(196): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(220): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(236): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(249): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(271): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(276): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(286): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(291): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(323): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(324): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(365): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>..\Source\PathFinder.cpp(366): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+         Model2D.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Mesh2D.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Main.cpp
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         LookAtCamera.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         InputHandler.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Global.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Game.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Game.cpp(15): warning C4305: 'argument' : truncation from 'int' to 'const bool'
+         Generating Code...
+         Compiling...
+         FPSLimitter.cpp
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         EntityFactory.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Entity2D.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\Entity2D.cpp(113): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>..\Source\Entity2D.cpp(318): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         Camera.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         BaseCamera.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         AnimatedSpritePhysics.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\AnimatedSpritePhysics.cpp(190): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>..\Source\AnimatedSpritePhysics.cpp(201): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>..\Source\AnimatedSpritePhysics.cpp(212): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>..\Source\AnimatedSpritePhysics.cpp(223): warning C4552: '-' : operator has no effect; expected operator with side-effect
+         AnimatedSprite.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\utilities\MathEx.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\DebugDefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Entity2D.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\source\Sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>..\Source\AnimatedSprite.cpp(58): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+         Generating Code...
+       Lib:
+         G:\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\x64\Debug\2DGameFramework.lib" libogg_static.lib libvorbis_static.lib libvorbisfile_static.lib OpenAL32.lib freetype253_D.lib Box2D.lib /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\ATI" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\Sound\Win64" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\Sound\Win32" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\Vorbis" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\Freetype" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\\Lib\Box2D" /NOLOGO /MACHINE:X64 x64\Debug\AnimatedSprite.obj
+         x64\Debug\AnimatedSpritePhysics.obj
+         x64\Debug\BaseCamera.obj
+         x64\Debug\Camera.obj
+         x64\Debug\Entity2D.obj
+         x64\Debug\EntityFactory.obj
+         x64\Debug\FPSLimitter.obj
+         x64\Debug\Game.obj
+         x64\Debug\Global.obj
+         x64\Debug\InputHandler.obj
+         x64\Debug\LookAtCamera.obj
+         x64\Debug\Main.obj
+         x64\Debug\Mesh2D.obj
+         x64\Debug\Model2D.obj
+         x64\Debug\PathFinder.obj
+         x64\Debug\RectangleMesh.obj
+         x64\Debug\Resource.obj
+         x64\Debug\ResourceManager.obj
+         x64\Debug\Shader.obj
+         x64\Debug\SoundManager.obj
+         x64\Debug\Sprite.obj
+         x64\Debug\State.obj
+         x64\Debug\StateConfig.obj
+         x64\Debug\StateManager.obj
+         x64\Debug\TextRenderer.obj
+         x64\Debug\Texture.obj
+         x64\Debug\Utils.obj
+     1>LIB : fatal error C1905: Front end and back end not compatible (must target same processor).
+     1>LINK : fatal error LNK1257: code generation failed
+     1>Done Building Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:31.76
