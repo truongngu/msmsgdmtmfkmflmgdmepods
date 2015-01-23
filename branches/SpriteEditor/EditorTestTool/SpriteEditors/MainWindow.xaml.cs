@@ -88,20 +88,7 @@ namespace SpriteEditor
         {
             try
             {
-                //BackgroundWorker worker = new BackgroundWorker();
-                //HandleInfor infor = new HandleInfor();
-                //infor.x = eglX;
-                //infor.y = eglY;
-                //infor.w = eglW;
-                //infor.h = eglH;
-                //infor.hWnd = hwnd.Handle;
-                //infor.hinstance = hinstance;
-                //worker.DoWork += worker_DoWork;
-                //worker.WorkerReportsProgress = true;
-                //worker.RunWorkerAsync(infor);
-                //worker.ProgressChanged += worker_ProgressChanged;
-
-                int hModule = LoadLibrary("Win32//Game.dll");
+                int hModule = LoadLibrary("Game.dll");
                 if (hModule == 0) throw new Exception("Không mở được Game");
                 IntPtr intPtr = GetProcAddress(hModule, "Rungame");
                 if (intPtr == IntPtr.Zero) throw new Exception("Không mở được phương thức trong Game");
@@ -121,7 +108,7 @@ namespace SpriteEditor
         private void LoadConfig()
         {
             string path = "../Resources/Gameplay.xml";
-           
+            game.LoadFromXml(path);
         }
 
         private void SaveConfig()
