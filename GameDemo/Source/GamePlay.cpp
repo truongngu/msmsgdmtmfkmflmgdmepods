@@ -8,6 +8,7 @@
 #include "2DGameFramework\SoundManager.h"
 #include "2DGameFramework\TextRenderer.h"
 #include "2DGameFramework\StateManager.h"
+#include "2DGameFramework\ConvertUtils.h"
 #include <string>
 
 GamePlayState::GamePlayState()
@@ -37,7 +38,9 @@ void GamePlayState::Mouse(MouseData mouse, bool bIsDown)
 	if (!mouse.isDown && mouse.type == Left)
 	{
 		SoundManager::getInstance()->PlayEffect(mListSoundName[0], false);
+		Entity2D* pic=GetPickingEntity(mouse);
 	}
+	
 }
 
 void GamePlayState::Key(unsigned char key, bool bIsPressed)
@@ -87,6 +90,7 @@ void GamePlayState::onTouch(int id, float x, float y)
 	if (id == Action::DOWN)
 	{
 		SoundManager::getInstance()->PlayEffect(mListSoundName[0], false);
+		
 	}
 }
 
@@ -103,7 +107,7 @@ void GamePlayState::Update(float deltatime)
 void GamePlayState::Draw()
 {
 #ifdef Win32
-	glClearColor(1.0, 0.0, 0.0, 1.0);
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glEnable(GL_DEPTH_TEST);
 #endif
 	State::Draw();

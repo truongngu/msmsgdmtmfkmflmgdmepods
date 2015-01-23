@@ -52,6 +52,12 @@ struct MatchStringState
    const std::string& s_;
 };
 
+struct CompareEntity2DByZ{
+	bool operator()(Entity2D* lx, Entity2D* rx) const {
+		return lx->GetPosition().z > rx->GetPosition().z;
+	}
+};
+
 void ReadLine(FILE *pFile, char* buffer);
 
 bool ReadToKey(FILE* pf, char key);
@@ -95,3 +101,5 @@ float MinF(float v1,float v2);
 float GetTimeNow();
 
 void SleepForATime(float ms);
+
+bool checkIfExistInResourcesDictory(string);
