@@ -19,7 +19,6 @@ int Game2D::CreateGame(ESContext* esContext)
 	Global::ScreenWidth = 600;
 	Global::ScreenHeight = 600;
 
-	EntityFactory::RegisterEntity("Back", new Sprite());
 
 	if (Game::CreateGame(esContext) == 0)
 	{

@@ -1,3 +1,6 @@
+e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc120.pdb
+e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc120.idb
+e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\game.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\global.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\inputhandler.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lookatcamera.obj
@@ -16,6 +19,7 @@ e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframewo
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\statemanager.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\textrenderer.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\texture.obj
+e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\utils.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\animatedsprite.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\animatedspritephysics.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\basecamera.obj
@@ -23,30 +27,70 @@ e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframewo
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\entity2d.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\entityfactory.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\fpslimitter.obj
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\game.obj
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\utils.obj
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc110.pdb
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\vc120.pdb
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\vc120.idb
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\game.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\global.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\inputhandler.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\lookatcamera.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\main.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\mesh2d.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\model2d.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\pathfinder.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\rectanglemesh.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\resource.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\resourcemanager.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\shader.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\soundmanager.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\sprite.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\state.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\stateconfig.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\statemanager.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\textrenderer.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\texture.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\utils.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\animatedsprite.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\animatedspritephysics.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\basecamera.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\camera.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\entity2d.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\entityfactory.obj
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\2dgameframework\debug\fpslimitter.obj
 e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\bin-ati\2dgameframework.lib
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc120.pdb
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc120.idb
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\cl.command.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\cl.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\cl.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.2144.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.2144.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.400.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.400.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.960.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.960.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib-link.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib.command.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\lib.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\vc110.idb
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\\bin-ati\2dgameframework.lib
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\cl.command.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\cl.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\cl.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\lib-link.1064.read.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\lib-link.1064.write.1.tlog
-e:\backup\study\3dproject\directx11-winphone\2dgameframework - svn\2dgameframework\debug\2dgameframework.tlog\lib.command.1.tlog
+f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\bin-ati\2dgameframework.lib
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\animatedsprite.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\animatedspritephysics.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\basecamera.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\camera.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\entity2d.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\entityfactory.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\fpslimitter.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\game.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\global.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\inputhandler.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\lookatcamera.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\main.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\mesh2d.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\model2d.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\pathfinder.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\rectanglemesh.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\resource.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\resourcemanager.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\shader.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\soundmanager.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\sprite.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\state.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\stateconfig.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\statemanager.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\textrenderer.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\texture.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\utils.obj
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\vc120.idb
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\vc120.pdb
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\\bin-ati\2dgameframework.lib
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\cl.command.1.tlog
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\cl.read.1.tlog
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\cl.write.1.tlog
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\lib-link.1352.read.1.tlog
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\lib-link.1352.write.1.tlog
+g:\hoc tap\nam 4\gameclub\project\2dgameframework[foreditor]\2dgameframework\debug\2dgameframework.tlog\lib.command.1.tlog
