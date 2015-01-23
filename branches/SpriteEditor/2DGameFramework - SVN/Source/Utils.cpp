@@ -499,3 +499,15 @@ void SleepForATime(float ms)
 #endif
 
 }
+
+
+bool checkIfExistInResourcesDictory(string path2File){
+	string path = Global::gameResourceDir + path2File;
+	FILE* file;
+	file = fopen(path.c_str(), "r");
+	if (file == 0){
+		return false;
+	}
+	fclose(file);
+	return true;
+}

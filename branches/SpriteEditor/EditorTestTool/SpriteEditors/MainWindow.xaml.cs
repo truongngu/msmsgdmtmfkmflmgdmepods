@@ -41,6 +41,15 @@ namespace SpriteEditor
         public static extern int MoveCameraTo(float x, float y);
 
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int MoveSelectedEntity(float x, float y);
+
+        [DllImport("Game.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void GetPickingEntity(StringBuilder name,float x, float y);
+
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void ReleaseSelectedEntity();
+
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SetHandleParent(IntPtr hWnd);
 
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
@@ -208,6 +217,7 @@ namespace SpriteEditor
         private void lblRender_MouseUp(object sender, MouseButtonEventArgs e)
         {
             MouseRequestHandle(false, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
+            ReleaseSelectedEntity();
             isMouseDown = false;
         }
 
@@ -233,15 +243,23 @@ namespace SpriteEditor
                 float deltaY = (float)(currCamY - prevCamY);
                 CameraX -= deltaX;
                 CameraY += deltaY;
-                MoveCameraTo(CameraX, CameraY);
+               // MoveCameraTo(CameraX, CameraY);
+                MoveSelectedEntity(deltaX, -deltaY);
             }
         }
 
         private void lblRender_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            int x = (int)e.GetPosition(lblRender).X;
+            int y= (int)e.GetPosition(lblRender).Y;
             MouseRequestHandle(true, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
             isMouseDown = true;
+            StringBuilder name = new StringBuilder();
+            GetPickingEntity(name,(int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y);
+            Console.WriteLine(x.ToString() + " " + y.ToString());
+            Console.WriteLine(name.ToString());
             prevPos = e.GetPosition(lblRender);
+            
         }
 
         private void lblRender_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -180,6 +180,10 @@ Vector3 Entity2D::GetRotateAngles()
 	return mRotateAngles;
 }
 
+string Entity2D::GetName(){
+	return mName;
+}
+
 void Entity2D::SetPosition(Vector3 value)
 {
 	mPosition=value;
@@ -202,6 +206,10 @@ void Entity2D::SetShader(Shaders* sha)
 {
 	mShader=sha;
 	sha->Refenrence();
+}
+
+void Entity2D::SetName(string value){
+	mName = value;
 }
 
 Matrix Entity2D::GetWorldMatrix()

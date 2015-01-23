@@ -32,6 +32,7 @@ int Game2D::CreateGame(ESContext* esContext)
 		pos = Global::currentCamera->GetPosition();
 		Global::currentCamera->SetPosition(Vector3(pos.x, 0, 30));
 		//Global::currentCamera->SetRotationAngle(Vector3(0, 0, PI / 2));
+		isInit = true;
 		return 0;
 	}
 	return -1;

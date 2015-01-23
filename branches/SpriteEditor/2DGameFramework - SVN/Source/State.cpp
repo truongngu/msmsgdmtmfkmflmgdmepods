@@ -16,6 +16,7 @@ State::State()
 	isInit=false;
 	nextState = 0;
 	stateConfig = new StateConfig();
+	pickedEntity = 0;
 }
 
 State::~State()
@@ -123,6 +124,7 @@ void State::Init(){
 					sprite->Play();
 
 					mListEntity.push_back(sprite);
+					sprite->SetName(infor->positionClone[i].nameOfClone);
 					entityList[infor->positionClone[i].nameOfClone] = sprite;
 					prevSprite = sprite;
 					sprite = 0;
@@ -219,4 +221,34 @@ Entity2D* State::GetEntityByName(std::string name){
 
 Entity2D* State::GetEntityByIndex(int i){
 	return mListEntity[i];
+}
+
+
+Entity2D* State::GetSelectedEntity(){
+	return pickedEntity;
+}
+
+Entity2D* State::GetPickingEntity(MouseData mouse){
+	Vector3 pos = ConvertCoordinate2D3D(Global::currentCamera, mouse.position);
+
+	vector<Entity2D*> tempList = mListEntity;
+	std::sort(tempList.begin(), tempList.end(), CompareEntity2DByZ());
+
+	int n = tempList.size();
+	bool hasPickedItem=false;
+	for (int i = 0; i < n; i++){
+		if (tempList[i]->IsPicked(mouse.position, Global::currentCamera)){
+			pickedEntity = tempList[i];
+			hasPickedItem = true;
+			break;
+		}
+	}
+	if (!hasPickedItem){
+		return 0;
+	}
+	return pickedEntity;
+}
+
+void State::ReleaseSelectedEntity(){
+	pickedEntity = 0;
 }

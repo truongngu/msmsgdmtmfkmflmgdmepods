@@ -141,7 +141,9 @@ protected:
 	float mWidth;
 	float mHeight;
 	float mDepth;
+	string mName;
 	bool isActiveInGame;
+
 //Physic
 	float velocity;
 	float flytime;
@@ -161,6 +163,7 @@ protected:
 	MoveDirect mMoveDirect;
 	float x0;
 
+
 public:
 	static float giatoc;
 	static float trongtruong;
@@ -172,11 +175,13 @@ public:
 	Vector3 GetScaleFactor();
 	virtual Bound GetBound();
 	int GetTargetMove(){return targetMove;}
+	string GetName();
 	virtual void SetPosition(Vector3);
 	virtual void SetRotateAngles(Vector3);
 	virtual void SetScaleFactor(Vector3);
 	void SetShader(Shaders*);
 	void SetIsActiveInGame(bool isActive){isActiveInGame=isActive;}
+	void SetName(string);
 
 	void FlipX();
 	

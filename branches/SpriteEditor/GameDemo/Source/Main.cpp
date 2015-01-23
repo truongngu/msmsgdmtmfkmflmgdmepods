@@ -8,6 +8,9 @@
 #include <windows.h>
 #include <windowsx.h>
 #include <iostream>
+#include "2DGameFramework\State.h"
+#include "2DGameFramework\StateManager.h"
+#include "2DGameFramework\Utils.h"
 
 ESContext esContext;
 HANDLE  hThreadArray[1];
@@ -247,6 +250,75 @@ extern "C"
 extern "C"
 {
 	__declspec(dllexport)
+		void MoveSelectedEntity(float deltax, float deltay){
+			State* curState = StateManager::GetInstance()->GetCurrentState();
+			if (curState && curState->IsInit()){
+
+				Sprite* picked = 0;
+				State* curState = StateManager::GetInstance()->GetCurrentState();
+				if (curState && curState->IsInit()){
+					picked = (Sprite*)curState->GetSelectedEntity();
+					if (picked){
+						Vector3 pos;
+						pos = picked->GetPosition();
+						picked->SetPosition(Vector3(pos.x + deltax, pos.y + deltay, pos.z));
+					}
+				}
+			}
+		}
+}
+
+
+
+
+extern "C"
+{
+	__declspec(dllexport)
+		void GetPickingEntity(WCHAR* name,float x, float y){
+			MouseData mouse;
+			mouse.position.x = x;
+			mouse.position.y = y;
+			string res = "";
+			Sprite* picked=0;
+			State* curState = StateManager::GetInstance()->GetCurrentState();
+			if (curState && curState->IsInit()){
+				picked = (Sprite*)curState->GetPickingEntity(mouse);
+				
+			}
+			if (picked != 0){
+				picked->SetShowBoundEnable(true);
+				res=picked->GetName();
+				Log(res.c_str());
+
+			}
+			memcpy(name, res.c_str(), res.length());
+			name[res.length()] = '\0';
+		}
+}
+
+extern "C"
+{
+	__declspec(dllexport)
+		void ReleaseSelectedEntity(){
+		
+			State* curState = StateManager::GetInstance()->GetCurrentState();
+			if (curState && curState->IsInit()){
+				
+				Sprite* picked = 0;
+				State* curState = StateManager::GetInstance()->GetCurrentState();
+				if (curState && curState->IsInit()){
+					picked = (Sprite*)curState->GetSelectedEntity();
+					if (picked)
+						picked->SetShowBoundEnable(false); 
+					curState->ReleaseSelectedEntity();
+				}
+			}
+		}
+}
+
+extern "C"
+{
+	__declspec(dllexport)
 		void Rungame(){
 			ExecuteEGLWindow("UpdateGame", 0);
 		}
@@ -277,6 +349,7 @@ extern "C"{
 			Creategame();
 		}
 }
+
 HWND GetContext(){
 	return esContext.hWnd;
 }

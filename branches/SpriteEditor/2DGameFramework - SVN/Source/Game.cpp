@@ -49,6 +49,9 @@ int Game::CreateGame(ESContext* esContext)
 		Global::TextShader->Load();
 		Global::TextShaderInWorld->Init("Resources//Shaders//TextInWorld.vsh", "Resources//Shaders//Text.fsh", 0);
 		Global::TextShaderInWorld->Load();
+		Game* game = Game::GetInstance();
+		game->isInit = true;
+		game->Resume();
 		return 0;
 	}
 	return -1;

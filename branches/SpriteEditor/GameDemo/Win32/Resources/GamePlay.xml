@@ -1,16 +1,37 @@
 <CONFIG name="GamePlay">
-	<ENTITY_LIST>
-		<ENTITY>
-			<TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
-			<CLASS_NAME>Back</CLASS_NAME>
-			<SPRITE_ATTRIBUTE fps="64.0" width="24" height="36" num_spriteX="2" num_spriteY="1" total_sprite="2"/>
-			<SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh"/>
-			<FRAME_INFO num_frame="0">
-				<FRAME name=""></FRAME>
-			</FRAME_INFO>
-			<CLONE_INFO num_clone="1">
-				<CLONE name="Background1" x="0.0" y="0.0" z="0.0" usedata="0"/>
-			</CLONE_INFO>
-		</ENTITY>
-	</ENTITY_LIST>
+  <ENTITY_LIST>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
+      <CLASS_NAME>Back</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="64.0" width="25" height="35" num_spriteX="2" num_spriteY="1" total_sprite="2" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0">
+        <FRAME name="">
+        </FRAME>
+      </FRAME_INFO>
+      <CLONE_INFO num_clone="1">
+        <CLONE name="Background1" x="0.0" y="-15.0" z="0.0" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/sogoku.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="AnimatedSprite1" x="0" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/backgroundFlappy.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="AnimatedSprite1" x="10" y="10" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+  </ENTITY_LIST>
 </CONFIG>
