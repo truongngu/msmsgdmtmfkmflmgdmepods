@@ -20,6 +20,9 @@ protected:
 
 	State* nextState;
 	StateConfig* stateConfig;
+
+	//for picking draft
+	Entity2D* pickedEntity;
 public:
 	State();
 	virtual ~State();
@@ -44,4 +47,8 @@ public:
 	void SetNextState(State*);
 	Entity2D* GetEntityByName(std::string);
 	Entity2D* GetEntityByIndex(int);
+
+	Entity2D* GetSelectedEntity();
+	Entity2D* GetPickingEntity(MouseData);
+	void ReleaseSelectedEntity();
 };

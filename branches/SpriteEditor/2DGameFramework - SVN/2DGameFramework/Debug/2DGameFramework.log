@@ -1,9 +1,61 @@
-﻿Build started 23/01/2015 4:04:52 CH.
+﻿Build started 23/01/2015 11:01:44 CH.
      1>Project "G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" on node 3 (Build target(s)).
-     1>Lib:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\ATI" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\Sound\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\Vorbis\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\Freetype" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\Freetype\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Include\Box2D" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Source\Entity2D.cpp ..\Source\EntityFactory.cpp ..\Source\FPSLimitter.cpp ..\Source\Game.cpp ..\Source\PathFinder.cpp ..\Source\ResourceManager.cpp ..\Source\SoundManager.cpp ..\Source\State.cpp ..\Source\StateConfig.cpp ..\Source\StateManager.cpp ..\Source\TextRenderer.cpp ..\Source\Utils.cpp
+         Entity2D.cpp
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\entity2d.cpp(133): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Utils.cpp
+         TextRenderer.cpp
+         StateManager.cpp
+         StateConfig.cpp
+         State.cpp
+         SoundManager.cpp
+         ResourceManager.cpp
+         PathFinder.cpp
+         Game.cpp
+         FPSLimitter.cpp
+         EntityFactory.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\BIN\2DGameFramework.lib" libogg_static.lib libvorbis_static.lib libvorbisfile_static.lib OpenAL32.lib freetype253_D.lib Box2D.lib /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\ATI" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\Sound\Win64" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\Sound\Win32" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\Vorbis" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\Freetype" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\Lib\Box2D" /NOLOGO Debug\AnimatedSprite.obj
+         Debug\AnimatedSpritePhysics.obj
+         Debug\BaseCamera.obj
+         Debug\Camera.obj
+         Debug\Entity2D.obj
+         Debug\EntityFactory.obj
+         Debug\FPSLimitter.obj
+         Debug\Game.obj
+         Debug\Global.obj
+         Debug\InputHandler.obj
+         Debug\LookAtCamera.obj
+         Debug\Main.obj
+         Debug\Mesh2D.obj
+         Debug\Model2D.obj
+         Debug\PathFinder.obj
+         Debug\RectangleMesh.obj
+         Debug\Resource.obj
+         Debug\ResourceManager.obj
+         Debug\Shader.obj
+         Debug\SoundManager.obj
+         Debug\Sprite.obj
+         Debug\State.obj
+         Debug\StateConfig.obj
+         Debug\StateManager.obj
+         Debug\TextRenderer.obj
+         Debug\Texture.obj
+         Debug\Utils.obj
+         libogg_static.lib(bitwise.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
          2DGameFramework.vcxproj -> G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework[ForEditor]\\BIN\2DGameFramework.lib
      1>Done Building Project "G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.21
+Time Elapsed 00:00:19.75
