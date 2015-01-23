@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
 using System.ComponentModel;
+using System.Collections;
 
 namespace SpriteEditor
 {
-    public class GameConfig
+    public class GameConfig : CollectionBase, ICustomTypeDescriptor
     {
         public GameConfig()
         {
@@ -17,47 +18,59 @@ namespace SpriteEditor
         }
 
         Dictionary<String, DistributeObject> _objects = new Dictionary<string, DistributeObject>();
-
         string _name;
+        List<EntityInfor> _entities = new List<EntityInfor>();
+        Vector2 _cameraPosition;
 
         public string Name
         {
             get { return _name; }
             set { _name = value; }
         }
-        float _width;
-
-        public float Width
+        
+        [TypeConverter(typeof(ExpandableObjectConverter))]
+        public List<EntityInfor> Entities
         {
-            get { return _width; }
-            set { _width = value; }
+            get { return _entities; }
+            set { _entities = value; }
         }
-        float _height;
-
-        public float Height
-        {
-            get { return _height; }
-            set { _height = value; }
-        }
-
-        public int NumOfEntity
-        {
-            get { return int.Parse(_objects["NumOfEntity"].GetAttribute("Value").Value.ToString()); }
-            set { _objects["NumOfEntity"].GetAttribute("Value").Value = value; }
-        }
-
-        public object this[string propertyName]
-        {
-            get { return _objects[propertyName].Attributes["Value"].Value; }
-            set { _objects[propertyName].SetAttribue("Value", new MyAttribute("Value", value)); }
-        }
-
-        Vector2 _cameraPosition;
 
         public Vector2 CameraPosition
         {
             get { return _cameraPosition; }
             set { _cameraPosition = value; }
+        }
+
+        public void LoadFromXml(string path)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(path);
+
+            XmlElement root = doc.DocumentElement;
+
+            Name = root.Attributes["name"].Value;
+
+            XmlNodeList nodeList = root.SelectNodes("ENTITY_LIST/ENTITY");
+
+            Entities = new List<EntityInfor>();
+
+            foreach (XmlNode node in nodeList)
+            {
+                EntityInfor infor = new EntityInfor();
+                infor.LoadFromXml(node);
+
+                Entities.Add(infor);
+            }
+        }
+
+        public void WriteToXml(string path)
+        {
+            
+        }
+
+        public void Add(EntityInfor infor)
+        {
+
         }
     }
 }
