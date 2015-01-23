@@ -22,8 +22,7 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label x:Name="lblRender" Grid.Column="0" BorderBrush="Black" BorderThickness="1" 
                    MouseUp="lblRender_MouseUp"
@@ -31,13 +30,6 @@
                    MouseDown="lblRender_MouseDown"
                    Background="Black"
                    SizeChanged="lblRender_SizeChanged"></Label>
-            <TextBox Grid.Column="1" 
-                     x:Name="txtConfig"
-                     TextWrapping="Wrap"
-                     AcceptsReturn="True"
-                     HorizontalScrollBarVisibility="Visible"
-                     VerticalScrollBarVisibility="Visible"
-                     >abc</TextBox>
             <wpg:WpfPropertyGrid x:Name="propertiGrid"  Grid.Column="2"
                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                               HelpVisible="{Binding ElementName=ShowDescrip, Path=IsChecked}" 

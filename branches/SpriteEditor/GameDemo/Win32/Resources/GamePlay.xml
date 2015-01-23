@@ -1,0 +1,16 @@
+<CONFIG name="GamePlay">
+	<ENTITY_LIST>
+		<ENTITY>
+			<TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
+			<CLASS_NAME>Back</CLASS_NAME>
+			<SPRITE_ATTRIBUTE fps="64.0" width="24" height="34" num_spriteX="2" num_spriteY="1" total_sprite="2"/>
+			<SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh"/>
+			<FRAME_INFO num_frame="0">
+				<FRAME name=""></FRAME>
+			</FRAME_INFO>
+			<CLONE_INFO num_clone="1">
+				<CLONE name="Background1" x="-15.0" y="-12.5" z="0.05" usedata="0"/>
+			</CLONE_INFO>
+		</ENTITY>
+	</ENTITY_LIST>
+</CONFIG>

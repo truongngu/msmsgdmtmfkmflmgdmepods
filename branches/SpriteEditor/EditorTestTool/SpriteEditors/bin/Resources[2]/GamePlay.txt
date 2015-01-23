@@ -1,0 +1,20 @@
+//Texture
+"Resources/Textures/GamePlay/background.tga"
+Back
+64.0 5 5 20 1 20
+"Resources/Shaders/SpriteShaderVS.vsh"
+"Resources/Shaders/SpriteShaderFS.fsh"
+0
+1
+Background1
+0.0 0.0 0.0 0
+"Resources/Textures/GamePlay/background.tga"
+Back
+64.0 1 1 1 1 1
+"Resources/Shaders/SpriteShaderVS.vsh"
+"Resources/Shaders/SpriteShaderFS.fsh"
+0
+1
+Background2
+0.0 0.0 0.1 0
+//End

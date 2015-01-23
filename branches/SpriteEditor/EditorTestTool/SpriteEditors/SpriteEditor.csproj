@@ -158,9 +158,6 @@
     <None Include="Resources\Textures\GamePlay\zombie.tga">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Win32\Game.lib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -196,13 +193,7 @@
     <None Include="Win32\2DGameFramework.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Win32\Game.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Win32\libEGL.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Win32\libGLESv2.dll">
+    <None Include="Win32\Game.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Win32\ogg.dll">
@@ -223,6 +214,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Configs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DLL\2DGameFramework.dll" />
+    <Content Include="DLL\Game.dll" />
+    <Content Include="DLL\libEGL.dll" />
+    <Content Include="DLL\libGLESv2.dll" />
+    <None Include="DLL\vorbisfile.dll" />
+    <None Include="DLL\vorbisenc.dll" />
+    <None Include="DLL\vorbis.dll" />
+    <None Include="DLL\OpenAL32.dll" />
+    <None Include="DLL\ogg.dll" />
+    <Content Include="Win32\Game.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Win32\libEGL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Win32\libGLESv2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

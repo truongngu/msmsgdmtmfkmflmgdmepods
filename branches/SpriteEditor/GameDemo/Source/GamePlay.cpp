@@ -13,7 +13,7 @@
 GamePlayState::GamePlayState()
 {
 	mName = "GamePlay";
-	path2Config = Global::gameResourceDir + string("Resources/GamePlay.txt");
+	path2Config = Global::gameResourceDir + string("Resources/GamePlay.xml");
 	path2SoundList = Global::gameResourceDir + string("Resources/GamePlaySound.txt");
 	TextRenderer* text = TextRenderer::GetInstance();
 	text->InitFont("Resources//Fonts//04B_19__.ttf", 25);
@@ -26,11 +26,10 @@ GamePlayState::~GamePlayState()
 void GamePlayState::Init()
 {
 	State::Init();
-
-	back = (Sprite*)GetEntityByName("Background1");
 	
 	LoadSound();
 	Key(32, true);
+	isInit = true;
 }
 
 void GamePlayState::Mouse(MouseData mouse, bool bIsDown)
@@ -104,11 +103,10 @@ void GamePlayState::Update(float deltatime)
 void GamePlayState::Draw()
 {
 #ifdef Win32
-	glClearColor(1.0, 1.0, 1.0, 1.0);
+	glClearColor(1.0, 0.0, 0.0, 1.0);
 	glEnable(GL_DEPTH_TEST);
 #endif
 	State::Draw();
-	back->drawBound();
 }
 void GamePlayState::ResumeSound()
 {

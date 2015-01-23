@@ -256,7 +256,6 @@ GLboolean WinCreate(ESContext *esContext, const char *title)
 void WinLoop(ESContext *esContext)
 {
 	if (isEditor){
-
 	}
 	else{
 		MSG msg = { 0 };
@@ -287,8 +286,10 @@ void WinLoop(ESContext *esContext)
 				SendMessage(esContext->hWnd, WM_PAINT, 0, 0);
 
 			// Call update function if registered
-			if (esContext->updateFunc != NULL)
+			if (esContext->updateFunc != NULL){
 				esContext->updateFunc(esContext, deltaTime);
+			}
+				
 		}
 	}
 }
