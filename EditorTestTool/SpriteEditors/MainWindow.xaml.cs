@@ -28,37 +28,37 @@ namespace SpriteEditor
     {
         #region DLLImport
         // Use DllImport to import the Win32 MessageBox function.
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int CreategameWithHandle(IntPtr hWnd);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int KeyRequestHandle(uint key);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int MouseRequestHandle(bool isDown, int x, int y, int type);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int MoveCameraTo(float x, float y);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SetHandleParent(IntPtr hWnd);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ExitRequestHandle();
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SetHandleLocaltion(int x, int y, int w, int h);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int SetWindowSizeChange(int x, int y, int w, int h);
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int RefreshRequestHandle();
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int Rungame();
 
-        [DllImport("Win32\\Game.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("Game.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ExecuteGame(StringBuilder method, object param);
 
         //call freelibrary
@@ -101,7 +101,7 @@ namespace SpriteEditor
                 //worker.RunWorkerAsync(infor);
                 //worker.ProgressChanged += worker_ProgressChanged;
 
-                int hModule = LoadLibrary("Game.dll");
+                int hModule = LoadLibrary("Win32//Game.dll");
                 if (hModule == 0) throw new Exception("Không mở được Game");
                 IntPtr intPtr = GetProcAddress(hModule, "Rungame");
                 if (intPtr == IntPtr.Zero) throw new Exception("Không mở được phương thức trong Game");
@@ -120,21 +120,14 @@ namespace SpriteEditor
 
         private void LoadConfig()
         {
-            string path = "../Resources/Gameplay.txt";
-            string[] allConfig = File.ReadAllLines(path);
-            txtConfig.Text = "";
-            for (int i = 0; i < allConfig.Length; i++)
-            {
-                txtConfig.Text += allConfig[i] + Environment.NewLine;
-            }
+            string path = "../Resources/Gameplay.xml";
+           
         }
 
         private void SaveConfig()
         {
-            string path = "../Resources/Gameplay.txt";
-            string allConfig = txtConfig.Text;
-
-            File.WriteAllText(path, allConfig);
+            string path = "../Resources/Gameplay.xml";
+           
         }
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -272,7 +265,7 @@ namespace SpriteEditor
             int wid = (int)e.NewSize.Width - 10;
             int hei = (int)e.NewSize.Height - 10;
 
-            SetWindowSizeChange(x, y, wid, hei);
+           // SetWindowSizeChange(x, y, wid, hei);
         }
     }
 }

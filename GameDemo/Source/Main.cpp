@@ -262,6 +262,7 @@ extern "C"
 			if (game->CreateGame(&esContext) != 0)
 			{
 				Delete(game);
+				return;
 			}
 			game->StartGame(&esContext);
 			/*Delete(game);
