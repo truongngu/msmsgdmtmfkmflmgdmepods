@@ -254,5 +254,49 @@ namespace SpriteEditor
 
            // SetWindowSizeChange(x, y, wid, hei);
         }
+
+        private void Add_Sprite(object sender, MouseButtonEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.DefaultExt = ".tga";
+            dlg.Filter = "TGA Files (*.tga)|*.tga";
+            Nullable<bool> result = dlg.ShowDialog();
+
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string path = dlg.FileName;
+                string file = System.IO.Path.GetFileName(path);
+                string curpath = System.AppDomain.CurrentDomain.BaseDirectory;
+                string topath=System.IO.Path.Combine("../Resources/Textures/"+file);
+                CopyFile(path, topath, true);
+                string path2Read = "Resources/Textures/" + file;
+
+                EntityInfor infor = new EntityInfor(path2Read);
+                game.Add(infor, "../Resources/Gameplay.xml");
+                game.LoadFromXml("../Resources/Gameplay.xml");
+                KeyRequestHandle(13);
+            }
+        }
+
+        private void Remove_Sprite(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        #region Method
+        //Kiem tra xem da ton tai file texture trong Resource chua
+        //fromPath: chep tu path nay
+        //toPath: den path nay
+        //replace: true thi replace file ton tai
+        void CopyFile(string fromPath,string toPath,bool replace)
+        {
+            System.IO.File.Copy(fromPath, toPath, true);
+        }
+
+       
+        #endregion
     }
 }
