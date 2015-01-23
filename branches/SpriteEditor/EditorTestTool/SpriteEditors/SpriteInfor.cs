@@ -135,6 +135,33 @@ namespace SpriteEditor
         #endregion
 
         #region Properties
+        public EntityInfor()
+        {
+
+        }
+
+        public EntityInfor(String path2Texture)
+        {
+            TexturePath = path2Texture;
+            ClassName = "AnimatedSprite";
+            Fps = 12.0f;
+            Width = 1.0f;
+            Height = 1.0f;
+            NumSpriteX = 1;
+            NumSpriteY = 1;
+            TotalSprite = 1;
+            VertexShader = "Resources/Shaders/SpriteShaderVS.vsh";
+            FragmentShader = "Resources/Shaders/SpriteShaderFS.fsh";
+            NumFrame = 0;
+            NumClone = 1;
+            CloneInfor clone = new CloneInfor();
+            clone.Name = "";
+            clone.X = 0.0f;
+            clone.Y = 0.0f;
+            clone.Z = 1.0f;
+            Clones.Add(clone);
+        }
+
         public string TexturePath
         {
             get { return _texturePath; }
@@ -287,6 +314,11 @@ namespace SpriteEditor
 
                 Clones.Add(clone);
             }
+        }
+
+        public void WriteToXML()
+        {
+
         }
         #endregion
     }

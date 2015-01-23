@@ -83,12 +83,6 @@ G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Resourc
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Resources\Textures\GamePlay\flappy.ico
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Resources\Textures\GamePlay\sogoku.png
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Resources\Textures\GamePlay\zombi2_run.jpg
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\2DGameFramework.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\ogg.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\OpenAL32.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\vorbis.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\vorbisenc.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\vorbisfile.dll
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\SpriteEditor.exe
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\SpriteEditor.pdb
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\MainWindow.g.cs
@@ -101,10 +95,6 @@ G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteE
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.Properties.Resources.resources
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.csproj.GenerateResource.Cache
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor_Content.g.cs
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\Game.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\libEGL.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\libGLESv2.dll
-G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\bin\Debug\Win32\Game.lib
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.csprojResolveAssemblyReference.cache
 F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\EditorTestTool\SpriteEditors\bin\Debug\SpriteEditor.exe.config
 F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.exe

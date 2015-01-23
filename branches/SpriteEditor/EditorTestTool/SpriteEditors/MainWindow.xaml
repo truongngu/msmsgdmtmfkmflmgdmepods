@@ -17,6 +17,10 @@
                     <Label>Open Project</Label>
                     <Label>Close Project</Label>
                 </MenuItem>
+                <MenuItem Header="Sprite">
+                    <Label MouseUp="Add_Sprite">Add Sprite</Label>
+                    <Label MouseUp="Remove_Sprite">Remove Sprite</Label>
+                </MenuItem>
             </Menu>
         </Grid>
         <Grid Grid.Row="1">
