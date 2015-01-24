@@ -445,6 +445,25 @@ Vector3 ConvertCoordinate2D3D(BaseCamera* cam,Vector2 pos2D)
 	}
 }
 
+Vector3 ConvertCoordinate2D3DByZIndex(BaseCamera* cam, Vector2 pos2D, float zindex)
+{
+	double x = 2.0 * pos2D.x / Global::ScreenWidth - 1;
+	double y = -2.0 * pos2D.y / Global::ScreenHeight + 1;
+	Matrix vp = cam->ViewMatrix()*cam->projection;
+	Matrix invert = InvertMatrix(vp);
+	Vector4 pos = Vector4(x, y, 0, 0);
+
+	pos = pos*invert;
+	Vector3 camPos = cam->GetPosition();
+	if (cam->IsOrthorView())
+		return Vector3(pos.x + camPos.x, pos.y + camPos.y, 0.0f);
+	else{
+		pos.x = pos.x*(camPos.z-zindex) + camPos.x;///ad->GetPosition().z);
+		pos.y = pos.y*(camPos.z-zindex) + camPos.y;///ad->GetPosition().z);
+		return Vector3(pos.x, pos.y, 0.0f);
+	}
+}
+
 Vector2 ConvertCoordinate3D2D(BaseCamera* cam,Vector3 pos3D)
 {
 	 Matrix vp = cam->projection * cam->ViewMatrix();

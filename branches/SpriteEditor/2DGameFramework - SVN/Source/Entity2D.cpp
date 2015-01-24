@@ -149,7 +149,7 @@ void Entity2D::StopFlying()
 
 bool Entity2D::IsPicked(Vector2 pickingPos,BaseCamera* cam)
 {
-	Vector3 pos=ConvertCoordinate2D3D(cam,pickingPos);
+	Vector3 pos=ConvertCoordinate2D3DByZIndex(cam,pickingPos,mPosition.z);
 	
 
 	mBound = GetBound();

@@ -93,6 +93,8 @@ int ArrCharLen(char*);
 
 Vector3 ConvertCoordinate2D3D(BaseCamera* cam,Vector2 pos2D);
 
+Vector3 ConvertCoordinate2D3DByZIndex(BaseCamera* cam,Vector2 pos2D,float zIndex);
+
 Vector2 ConvertCoordinate3D2D(BaseCamera* cam,Vector3 pos3D);
 
 float MaxF(float v1,float v2);

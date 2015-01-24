@@ -143,6 +143,7 @@ protected:
 	float mDepth;
 	string mName;
 	bool isActiveInGame;
+
 //Physic
 	float velocity;
 	float flytime;
