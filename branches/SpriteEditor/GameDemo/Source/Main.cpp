@@ -278,6 +278,8 @@ extern "C"
 			MouseData mouse;
 			mouse.position.x = x;
 			mouse.position.y = y;
+			string pickAt = "Game2D: Pick at " + std::to_string(x) + "," + std::to_string(y);
+			Log(pickAt.c_str());
 			string res = "";
 			Sprite* picked=0;
 			State* curState = StateManager::GetInstance()->GetCurrentState();
