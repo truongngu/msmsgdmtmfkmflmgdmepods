@@ -28,24 +28,31 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="lblRender" Grid.Column="0" BorderBrush="Black" BorderThickness="1" 
+            <Grid Grid.Column="0">
+                <Grid Background="LightGray" Margin="5">
+                <Label x:Name="lblRender"
                    MouseUp="lblRender_MouseUp"
                    MouseMove="lblRender_MouseMove"
                    MouseDown="lblRender_MouseDown"
-                   Background="Black"
                    SizeChanged="lblRender_SizeChanged"></Label>
+                </Grid>
+            </Grid>
             <wpg:WpfPropertyGrid x:Name="propertiGrid"  Grid.Column="2"
                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                               HelpVisible="{Binding ElementName=ShowDescrip, Path=IsChecked}" 
                               ToolbarVisible="{Binding ElementName=ShowToolbar, Path=IsChecked}"
-                              PropertySort="{Binding ElementName=ComboSort, Path=SelectedItem}" />
+                              PropertySort="{Binding ElementName=ComboSort, Path=SelectedItem}"/>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="5*" />
             </Grid.ColumnDefinitions>
             <Button x:Name="btnUpdate" Margin="10" Click="Button_Click">Update</Button>
+            <Label x:Name="txtMouseDownPos" Grid.Column="1" Margin="10" BorderBrush="Black" BorderThickness="1">0,0</Label>
+            <Label x:Name="txtMouseMovePos" Grid.Column="2" Margin="10" BorderBrush="Black" BorderThickness="1">0,0</Label>
         </Grid>
     </Grid>
 </Window>

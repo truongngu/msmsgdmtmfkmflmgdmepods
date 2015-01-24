@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using System.Xml;
 
 namespace SpriteEditor
 {
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class CloneInfor
     {
         #region Field
@@ -59,5 +61,14 @@ namespace SpriteEditor
             UserData = float.Parse(element.Attributes["usedata"].Value);
         }
         #endregion
+
+        public void WriteToXml(XmlElement clone)
+        {
+            clone.SetAttribute("name", Name);
+            clone.SetAttribute("x", X.ToString());
+            clone.SetAttribute("y", Y.ToString());
+            clone.SetAttribute("z", Z.ToString());
+            clone.SetAttribute("usedata", UserData.ToString());
+        }
     }
 }

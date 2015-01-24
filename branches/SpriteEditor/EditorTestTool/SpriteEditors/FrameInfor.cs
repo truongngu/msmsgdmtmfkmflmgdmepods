@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using System.Xml;
 
 namespace SpriteEditor
 {
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class FrameInfor
     {
         #region Field
@@ -45,5 +47,18 @@ namespace SpriteEditor
             }
         }
         #endregion
+
+        public void WriteToXml(XmlElement frame)
+        {
+            frame.SetAttribute("name", Name);
+            List<int> content = FrameContent;
+            int m = content.Count;
+            String frameContent = "";
+            for (int j = 0; j < m; j++)
+            {
+                frameContent += content[j] + " ";
+            }
+            frame.InnerText = frameContent;
+        }
     }
 }
