@@ -37,8 +37,13 @@ void GamePlayState::Mouse(MouseData mouse, bool bIsDown)
 {
 	if (!mouse.isDown && mouse.type == Left)
 	{
+		Vector3 pos=ConvertCoordinate2D3D(Global::currentCamera, mouse.position);
+		Log(stringify(mouse.position.x).c_str());
+		Log(stringify(mouse.position.y).c_str());
 		SoundManager::getInstance()->PlayEffect(mListSoundName[0], false);
-		Entity2D* pic=GetPickingEntity(mouse);
+		Entity2D* pic = GetPickingEntity(mouse); 
+		if (pic)
+			Log(pic->GetName().c_str());
 	}
 	
 }
@@ -111,6 +116,9 @@ void GamePlayState::Draw()
 	glEnable(GL_DEPTH_TEST);
 #endif
 	State::Draw();
+	int n = mListEntity.size();
+	for (int i = 0; i < n; i++)
+		mListEntity[i]->drawBound();
 }
 void GamePlayState::ResumeSound()
 {
