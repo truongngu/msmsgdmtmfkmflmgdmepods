@@ -90,7 +90,16 @@ namespace SpriteEditor
             InitializeComponent();
 
             propertiGrid.SelectedObject = game;
-            
+            propertiGrid.KeyUp += propertiGrid_KeyUp;
+        }
+
+        void propertiGrid_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SaveConfig();
+                KeyRequestHandle(13);
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -123,7 +132,7 @@ namespace SpriteEditor
         private void SaveConfig()
         {
             string path = "../Resources/Gameplay.xml";
-           
+            game.WriteToXml(path);
         }
 
         void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -176,10 +185,10 @@ namespace SpriteEditor
             HwndSource hwnd = (HwndSource)HwndSource.FromVisual(lblRender);
             IntPtr hinstance = Marshal.GetHINSTANCE(typeof(App).Module);
             Point renderedLocation = lblRender.TranslatePoint(new Point(0, 0), this);
-            int eglX = (int)renderedLocation.X + 5;
-            int eglY = (int)renderedLocation.Y + 5;
-            int eglW = (int)lblRender.ActualWidth - 10;
-            int eglH = (int)lblRender.ActualHeight - 10;
+            int eglX = (int)renderedLocation.X;
+            int eglY = (int)renderedLocation.Y;
+            int eglW = (int)lblRender.ActualWidth;
+            int eglH = (int)lblRender.ActualHeight;
 
             unsafe
             {
@@ -205,9 +214,6 @@ namespace SpriteEditor
             {
                 MessageBox.Show(ex.Message, ex.TargetSite.Name);
             }
-            //StringBuilder sb = new StringBuilder(10);
-            //sb.AppendLine("Rungame");
-            //ExecuteGame(sb, 1);
         }
 
         bool isMouseDown = false;
@@ -231,6 +237,7 @@ namespace SpriteEditor
             double viewWidth = lblRender.ActualWidth;
             double viewHeight = lblRender.ActualHeight;
             currPos = e.GetPosition(lblRender);
+            txtMouseMovePos.Content = currPos.X + "," + currPos.Y;
             double prevCamX = prevPos.X * cameraWidth / viewWidth;
             double prevCamY = prevPos.Y * cameraHeight / viewHeight;
             double currCamX = currPos.X * cameraWidth / viewWidth;
@@ -238,13 +245,13 @@ namespace SpriteEditor
             prevPos = currPos;
             if (isMouseDown)
             {
-
+                //kiem tra chon entity thi move entity
                 float deltaX = (float)(currCamX - prevCamX);
                 float deltaY = (float)(currCamY - prevCamY);
                 CameraX -= deltaX;
                 CameraY += deltaY;
                // MoveCameraTo(CameraX, CameraY);
-                MoveSelectedEntity(deltaX, -deltaY);
+                //MoveSelectedEntity(deltaX, -deltaY);
             }
         }
 
@@ -252,6 +259,7 @@ namespace SpriteEditor
         {
             int x = (int)e.GetPosition(lblRender).X;
             int y= (int)e.GetPosition(lblRender).Y;
+            txtMouseDownPos.Content = x + "," + y;
             MouseRequestHandle(true, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
             isMouseDown = true;
             StringBuilder name = new StringBuilder();
@@ -265,12 +273,12 @@ namespace SpriteEditor
         private void lblRender_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             Point renderedLocation = lblRender.TranslatePoint(new Point(0, 0), this);
-            int x = (int)renderedLocation.X + 5;
-            int y = (int)renderedLocation.Y + 5;
-            int wid = (int)e.NewSize.Width - 10;
-            int hei = (int)e.NewSize.Height - 10;
+            int x = (int)renderedLocation.X;
+            int y = (int)renderedLocation.Y;
+            int wid = (int)e.NewSize.Width;
+            int hei = (int)e.NewSize.Height;
 
-           // SetWindowSizeChange(x, y, wid, hei);
+            SetWindowSizeChange(x, y, wid, hei);
         }
 
         private void Add_Sprite(object sender, MouseButtonEventArgs e)
@@ -294,7 +302,7 @@ namespace SpriteEditor
 
                 EntityInfor infor = new EntityInfor(path2Read);
                 game.Add(infor, "../Resources/Gameplay.xml");
-                game.LoadFromXml("../Resources/Gameplay.xml");
+                //game.LoadFromXml("../Resources/Gameplay.xml");
                 KeyRequestHandle(13);
             }
         }

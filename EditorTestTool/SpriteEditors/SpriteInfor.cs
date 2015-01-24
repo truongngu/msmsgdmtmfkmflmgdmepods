@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,6 +104,7 @@ namespace SpriteEditor
         }
     }
 
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class EntityInfor
     {
         #region Field
@@ -126,11 +128,15 @@ namespace SpriteEditor
         //FRAME - ANIMATION
         int _numFrame;
         List<FrameInfor> _frames = new List<FrameInfor>();
+        MyCollection<FrameInfor> _entityFrames = new MyCollection<FrameInfor>();
+
         //FRAME - ANIMATION
 
         //CLONE
         int _numClone;
         List<CloneInfor> _clones = new List<CloneInfor>();
+        MyCollection<CloneInfor> _entityClones = new MyCollection<CloneInfor>();
+
         //CLONE
         #endregion
 
@@ -162,18 +168,34 @@ namespace SpriteEditor
             Clones.Add(clone);
         }
 
+        [TypeConverter(typeof(ExpandableObjectConverter))]
+        public MyCollection<CloneInfor> EntityClones
+        {
+            get { return _entityClones; }
+            set { _entityClones = value; }
+        }
+
+        
+        public MyCollection<FrameInfor> EntityFrames
+        {
+            get { return _entityFrames; }
+            set { _entityFrames = value; }
+        }
+
+        [Category("Required")]        
         public string TexturePath
         {
             get { return _texturePath; }
             set { _texturePath = value; }
         }
-
+        
         public List<CloneInfor> Clones
         {
             get { return _clones; }
             set { _clones = value; }
         }
 
+        [ReadOnly(true)]
         public int NumClone
         {
             get { return _numClone; }
@@ -291,6 +313,7 @@ namespace SpriteEditor
                 infor.LoadFromXml(frameNode[i]);
 
                 Frames.Add(infor);
+                EntityFrames.Add(infor);
             }
 
             string cloneXpath = "CLONE_INFO";
@@ -313,12 +336,13 @@ namespace SpriteEditor
                 clone.LoadFromXml(cloneNode[i]);
 
                 Clones.Add(clone);
+                EntityClones.Add(clone);
             }
         }
 
-        public void WriteToXML()
+        public override string ToString()
         {
-
+            return ClassName + " " + TexturePath;
         }
         #endregion
     }

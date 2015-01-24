@@ -60,8 +60,11 @@
     </ApplicationDefinition>
     <Compile Include="CloneInfor.cs" />
     <Compile Include="DistributedObject.cs" />
+    <Compile Include="EmployeeCollectionPropertyDescriptor.cs" />
+    <Compile Include="EntityInforCollection.cs" />
     <Compile Include="FrameInfor.cs" />
     <Compile Include="SpriteInfor.cs" />
+    <Compile Include="TypeConverter.cs" />
     <Compile Include="WpfPropertyGrid.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
