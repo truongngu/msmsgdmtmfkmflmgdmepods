@@ -229,14 +229,14 @@ Entity2D* State::GetSelectedEntity(){
 }
 
 Entity2D* State::GetPickingEntity(MouseData mouse){
-	Vector3 pos = ConvertCoordinate2D3D(Global::currentCamera, mouse.position);
-
 	vector<Entity2D*> tempList = mListEntity;
 	std::sort(tempList.begin(), tempList.end(), CompareEntity2DByZ());
 
 	int n = tempList.size();
 	bool hasPickedItem=false;
 	for (int i = 0; i < n; i++){
+		if (tempList[i]->GetPosition().z>Global::currentCamera->GetPosition().z)
+			continue;
 		if (tempList[i]->IsPicked(mouse.position, Global::currentCamera)){
 			pickedEntity = tempList[i];
 			hasPickedItem = true;
