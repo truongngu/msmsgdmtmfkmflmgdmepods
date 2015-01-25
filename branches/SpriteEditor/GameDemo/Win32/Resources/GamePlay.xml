@@ -1,4 +1,4 @@
-<CONFIG name="GamePlayu">
+<CONFIG name="GamePlay">
   <ENTITY_LIST>
     <ENTITY>
       <TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
