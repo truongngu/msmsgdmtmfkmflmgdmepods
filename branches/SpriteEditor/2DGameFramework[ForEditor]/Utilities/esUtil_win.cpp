@@ -52,11 +52,7 @@ void ChangeEGLWindowSize(int x, int y, int wid, int hei){
 
 void ExecuteEGLWindow(char* method, void* param){
 	if (strstr(method, "UpdateGame")){
-		DWORD currTime = GetTickCount();
-		float time = (float)param;
-		if (windownEsContext->updateFunc != NULL)
-			windownEsContext->updateFunc(windownEsContext, currTime - lastTime);
-		lastTime = currTime;
+		
 	}
 }
 // Main window procedure

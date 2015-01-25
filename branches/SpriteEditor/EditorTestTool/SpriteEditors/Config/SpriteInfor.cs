@@ -23,7 +23,7 @@ namespace SpriteEditor
             get { return _x; }
             set { _x = value; }
         }
-        
+
         public Vector2(float x, float y)
         {
             _x = x;
@@ -169,30 +169,24 @@ namespace SpriteEditor
         }
 
         [TypeConverter(typeof(ExpandableObjectConverter))]
-        public MyCollection<CloneInfor> EntityClones
+        public MyCollection<CloneInfor> Clones
         {
             get { return _entityClones; }
             set { _entityClones = value; }
         }
 
-        
-        public MyCollection<FrameInfor> EntityFrames
+
+        public MyCollection<FrameInfor> Frames
         {
             get { return _entityFrames; }
             set { _entityFrames = value; }
         }
 
-        [Category("Required")]        
+        [Category("Required")]
         public string TexturePath
         {
             get { return _texturePath; }
             set { _texturePath = value; }
-        }
-        
-        public List<CloneInfor> Clones
-        {
-            get { return _clones; }
-            set { _clones = value; }
         }
 
         [ReadOnly(true)]
@@ -200,12 +194,6 @@ namespace SpriteEditor
         {
             get { return _numClone; }
             set { _numClone = value; }
-        }
-
-        public List<FrameInfor> Frames
-        {
-            get { return _frames; }
-            set { _frames = value; }
         }
 
         public int NumFrame
@@ -302,18 +290,17 @@ namespace SpriteEditor
             string childFrame = "FRAME";
             XmlNodeList frameNode = attrEle.SelectNodes(childFrame);
 
-            Frames = new List<FrameInfor>();
+            Frames = new MyCollection<FrameInfor>();
             int size = frameNode.Count;
             if (size > NumFrame)
                 size = NumFrame;
             //foreach (XmlNode node in frameNode)
-            for (int i = 0; i < size;i++)
+            for (int i = 0; i < size; i++)
             {
                 FrameInfor infor = new FrameInfor();
                 infor.LoadFromXml(frameNode[i]);
 
                 Frames.Add(infor);
-                EntityFrames.Add(infor);
             }
 
             string cloneXpath = "CLONE_INFO";
@@ -321,7 +308,7 @@ namespace SpriteEditor
 
             NumClone = int.Parse(attrEle.Attributes["num_clone"].Value);
 
-            Clones = new List<CloneInfor>();
+            Clones = new MyCollection<CloneInfor>();
 
             string childClone = "CLONE";
             XmlNodeList cloneNode = attrEle.SelectNodes(childClone);
@@ -336,7 +323,6 @@ namespace SpriteEditor
                 clone.LoadFromXml(cloneNode[i]);
 
                 Clones.Add(clone);
-                EntityClones.Add(clone);
             }
         }
 

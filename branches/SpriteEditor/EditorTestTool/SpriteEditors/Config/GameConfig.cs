@@ -30,16 +30,10 @@ namespace SpriteEditor
             set { _name = value; }
         }
 
-        public MyCollection<EntityInfor> EntityCollection
+        public MyCollection<EntityInfor> Entities
         {
             get { return _entityCollection; }
             set { _entityCollection = value; }
-        }
-
-        public List<EntityInfor> Entities
-        {
-            get { return _entities; }
-            set { _entities = value; }
         }
 
         public Vector2 CameraPosition
@@ -59,8 +53,7 @@ namespace SpriteEditor
 
             XmlNodeList nodeList = root.SelectNodes("ENTITY_LIST/ENTITY");
 
-            Entities = new List<EntityInfor>();
-            EntityCollection = new MyCollection<EntityInfor>();
+            Entities = new MyCollection<EntityInfor>();
 
             foreach (XmlNode node in nodeList)
             {
@@ -68,7 +61,6 @@ namespace SpriteEditor
                 infor.LoadFromXml(node);
 
                 Entities.Add(infor);
-                EntityCollection.Add(infor);
             }
         }
 
@@ -83,9 +75,9 @@ namespace SpriteEditor
                 doc.AppendChild(root);
                 XmlNode entityList = doc.CreateElement("ENTITY_LIST");
                 root.AppendChild(entityList);
-                for (int t = 0; t < EntityCollection.Count; t++)
+                for (int t = 0; t < Entities.Count; t++)
                 {
-                    EntityInfor infor = EntityCollection[t];
+                    EntityInfor infor = Entities[t];
 
                     XmlElement entity = doc.CreateElement("ENTITY");
                     XmlElement TEXTURE_PATH = doc.CreateElement("TEXTURE_PATH");
@@ -145,7 +137,6 @@ namespace SpriteEditor
         public void Add(EntityInfor infor, string path2XML)
         {
             Entities.Add(infor);
-            EntityCollection.Add(infor);
             XmlDocument doc = new XmlDocument();
             doc.Load(path2XML);
             if (doc != null)
