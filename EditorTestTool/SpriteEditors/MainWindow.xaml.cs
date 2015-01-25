@@ -89,7 +89,7 @@ namespace SpriteEditor
         public MainWindow()
         {
             InitializeComponent();
-
+            Global.propertitiesGrid = this.propertiGrid;
             propertiGrid.SelectedObject = game;
             propertiGrid.KeyUp += propertiGrid_KeyUp;
         }
@@ -228,7 +228,7 @@ namespace SpriteEditor
         private void lblRender_MouseUp(object sender, MouseButtonEventArgs e)
         {
             MouseRequestHandle(false, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
-            ReleaseSelectedEntity();
+            //ReleaseSelectedEntity();
             isMouseDown = false;
         }
 
@@ -270,8 +270,6 @@ namespace SpriteEditor
             StringBuilder name = new StringBuilder();
             ReleaseSelectedEntity();
             GetPickingEntity(name,(int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y);
-            //Console.WriteLine(name.ToString());
-            //MessageBox.Show(name.ToString(), "Name");
             prevPos = e.GetPosition(lblRender);
             
         }
@@ -310,6 +308,7 @@ namespace SpriteEditor
                 game.Add(infor, "../Resources/Gameplay.xml");
                 //game.LoadFromXml("../Resources/Gameplay.xml");
                 KeyRequestHandle(13);
+                Global.RefreshEditorGrid();
             }
         }
 
