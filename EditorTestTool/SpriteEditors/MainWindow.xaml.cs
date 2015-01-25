@@ -263,9 +263,10 @@ namespace SpriteEditor
             MouseRequestHandle(true, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
             isMouseDown = true;
             StringBuilder name = new StringBuilder();
+            ReleaseSelectedEntity();
             GetPickingEntity(name,(int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y);
-            Console.WriteLine(x.ToString() + " " + y.ToString());
             Console.WriteLine(name.ToString());
+            MessageBox.Show(name.ToString(), "Name");
             prevPos = e.GetPosition(lblRender);
             
         }

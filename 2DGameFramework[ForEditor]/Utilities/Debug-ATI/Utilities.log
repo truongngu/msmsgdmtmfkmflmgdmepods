@@ -1,33 +1,9 @@
-﻿Build started 1/24/2015 10:14:07 AM.
-     1>Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\Utilities\Utilities.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Nvidia" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug-ATI\Utilities.pch" /Fo"Debug-ATI\\" /Fd"Debug-ATI\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
-         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Nvidia" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug-ATI\Utilities.pch" /Fo"Debug-ATI\\" /Fd"Debug-ATI\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt esShader.cpp esUtil.cpp esUtil_win.cpp Math.cpp TGA.cpp
-         TGA.cpp
-         Math.cpp
-         esUtil_win.cpp
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(57): warning C4244: 'argument' : conversion from 'unsigned long' to 'float', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(110): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(122): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(134): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(146): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework[foreditor]\utilities\esutil_win.cpp(157): warning C4244: 'argument' : conversion from 'LONG' to 'GLfloat', possible loss of data
-         esUtil.cpp
-         esShader.cpp
-         Generating Code...
-       Lib:
-         G:\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\BIN\Utilities.lib" /NOLOGO "Debug-ATI\esShader.obj"
-         "Debug-ATI\esUtil.obj"
-         "Debug-ATI\esUtil_win.obj"
-         "Debug-ATI\Math.obj"
-         "Debug-ATI\stdafx.obj"
-         "Debug-ATI\TGA.obj"
+﻿Build started 1/24/2015 8:52:15 PM.
+     1>Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\Utilities\Utilities.vcxproj" on node 3 (Build target(s)).
+     1>Lib:
          Utilities.vcxproj -> F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\BIN\Utilities.lib
      1>Done Building Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\Utilities\Utilities.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.58
+Time Elapsed 00:00:01.90

@@ -1,19 +1,251 @@
-﻿Build started 24/01/2015 2:28:22 CH.
-     1>Project "G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/24/2015 8:52:15 PM.
+     1>Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\ATI" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\Sound\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\Vorbis\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\Freetype" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\Freetype\include" /I"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Include\Box2D" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Source\State.cpp
-         State.cpp
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\ATI" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\include" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Sound\include" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Vorbis\include" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Freetype" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Freetype\include" /I"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Include\Box2D" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Source\AnimatedSprite.cpp ..\Source\AnimatedSpritePhysics.cpp ..\Source\BaseCamera.cpp ..\Source\Camera.cpp ..\Source\Entity2D.cpp ..\Source\EntityFactory.cpp ..\Source\FPSLimitter.cpp ..\Source\Game.cpp ..\Source\Global.cpp ..\Source\InputHandler.cpp ..\Source\LookAtCamera.cpp ..\Source\Main.cpp ..\Source\Mesh2D.cpp ..\Source\Model2D.cpp ..\Source\PathFinder.cpp ..\Source\RectangleMesh.cpp ..\Source\Resource.cpp ..\Source\ResourceManager.cpp ..\Source\Shader.cpp ..\Source\SoundManager.cpp ..\Source\Sprite.cpp ..\Source\State.cpp ..\Source\StateConfig.cpp ..\Source\StateManager.cpp ..\Source\TextRenderer.cpp ..\Source\Texture.cpp ..\Source\Utils.cpp
+         Utils.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
                  c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\state.cpp(112): warning C4018: '<' : signed/unsigned mismatch
-     1>g:\hoc tap\nam 4\gameclub\project\2dgameframework - svn\source\state.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(424): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(425): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(426): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(435): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(454): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(475): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(477): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(478): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(496): warning C4244: 'return' : conversion from 'clock_t' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\utils.cpp(511): warning C4244: 'argument' : conversion from 'float' to 'DWORD', possible loss of data
+         Texture.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         TextRenderer.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(62): warning C4244: 'argument' : conversion from 'float' to 'FT_UInt', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(326): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(327): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(328): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(329): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(331): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\textrenderer.cpp(332): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         StateManager.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         StateConfig.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(62): warning C4101: 'numEntity' : unreferenced local variable
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(181): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(182): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(183): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(184): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(185): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(186): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(212): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(213): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(214): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(215): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\rapidxml_utils.hpp(40): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'size_t', possible loss of data
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\rapidxml_utils.hpp(28) : while compiling class template member function 'rapidxml::file<char>::file(const char *)'
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(156) : see reference to function template instantiation 'rapidxml::file<char>::file(const char *)' being compiled
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\stateconfig.cpp(156) : see reference to class template instantiation 'rapidxml::file<char>' being compiled
+         State.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\state.cpp(112): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\state.cpp(117): warning C4018: '<' : signed/unsigned mismatch
+         Sprite.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.cpp(95): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.cpp(128): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLint', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.cpp(132): warning C4244: 'argument' : conversion from 'GLfloat' to 'GLint', possible loss of data
+         SoundManager.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\soundmanager.cpp(184): warning C4101: 'size' : unreferenced local variable
+         Shader.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\shader.cpp(200): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\shader.cpp(201): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+         ResourceManager.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\resourcemanager.cpp(21): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\resourcemanager.cpp(26): warning C4018: '<' : signed/unsigned mismatch
+         Resource.cpp
+         RectangleMesh.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         PathFinder.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(15): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(16): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(73): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(213): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(323): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(324): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(365): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\pathfinder.cpp(366): warning C4244: 'initializing' : conversion from 'GLfloat' to 'int', possible loss of data
+         Model2D.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Mesh2D.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Main.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         LookAtCamera.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         InputHandler.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Global.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+         Game.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\game.cpp(16): warning C4305: 'argument' : truncation from 'int' to 'const bool'
+         Generating Code...
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\soundmanager.cpp(408): warning C4715: 'SoundManager::isPlaying' : not all control paths return a value
+         Compiling...
+         FPSLimitter.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         EntityFactory.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Entity2D.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.cpp(133): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+         Camera.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         BaseCamera.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+         AnimatedSpritePhysics.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(190): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(201): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(212): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(223): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(259): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(270): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(281): warning C4552: '-' : operator has no effect; expected operator with side-effect
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\animatedspritephysics.cpp(292): warning C4552: '-' : operator has no effect; expected operator with side-effect
+         AnimatedSprite.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\2dgameframework - svn\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\BIN\2DGameFramework.lib" libogg_static.lib libvorbis_static.lib libvorbisfile_static.lib OpenAL32.lib freetype253_D.lib Box2D.lib /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\ATI" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\Sound\Win64" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\Sound\Win32" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\Vorbis" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\Freetype" /LIBPATH:"G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\Lib\Box2D" /NOLOGO Debug\AnimatedSprite.obj
+         G:\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\BIN\2DGameFramework.lib" libogg_static.lib libvorbis_static.lib libvorbisfile_static.lib OpenAL32.lib freetype253_D.lib Box2D.lib /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\ATI" /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\Sound\Win64" /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\Sound\Win32" /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\Vorbis" /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\Freetype" /LIBPATH:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\Lib\Box2D" /NOLOGO Debug\AnimatedSprite.obj
          Debug\AnimatedSpritePhysics.obj
          Debug\BaseCamera.obj
          Debug\Camera.obj
@@ -41,9 +273,9 @@
          Debug\Texture.obj
          Debug\Utils.obj
          libogg_static.lib(bitwise.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-         2DGameFramework.vcxproj -> G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\\BIN\2DGameFramework.lib
-     1>Done Building Project "G:\Hoc Tap\Nam 4\GameClub\Project\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" (Build target(s)).
+         2DGameFramework.vcxproj -> F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework[ForEditor]\\BIN\2DGameFramework.lib
+     1>Done Building Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.52
+Time Elapsed 00:00:32.52
