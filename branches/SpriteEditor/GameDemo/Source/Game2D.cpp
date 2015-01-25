@@ -16,9 +16,6 @@ Game2D* Game2D::GetInstance()
 #ifdef Win32
 int Game2D::CreateGame(ESContext* esContext)
 {
-	Global::ScreenWidth = 600;
-	Global::ScreenHeight = 600;
-
 
 	if (Game::CreateGame(esContext) == 0)
 	{

@@ -58,13 +58,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CloneInfor.cs" />
+    <Compile Include="Config\CloneInfor.cs" />
     <Compile Include="DistributedObject.cs" />
-    <Compile Include="EmployeeCollectionPropertyDescriptor.cs" />
-    <Compile Include="EntityInforCollection.cs" />
-    <Compile Include="FrameInfor.cs" />
-    <Compile Include="SpriteInfor.cs" />
-    <Compile Include="TypeConverter.cs" />
+    <Compile Include="Config\EmployeeCollectionPropertyDescriptor.cs" />
+    <Compile Include="Config\EntityInforCollection.cs" />
+    <Compile Include="Config\FrameInfor.cs" />
+    <Compile Include="Config\SpriteInfor.cs" />
+    <Compile Include="Config\TypeConverter.cs" />
     <Compile Include="WpfPropertyGrid.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -74,7 +74,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GameConfig.cs" />
+    <Compile Include="Config\GameConfig.cs" />
     <Compile Include="HandleInfor.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

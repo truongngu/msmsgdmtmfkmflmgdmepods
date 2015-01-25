@@ -159,6 +159,8 @@ extern "C"
 {
 	__declspec(dllexport)
 		void SetHandleLocaltion(int x, int y, int w, int h){
+			Global::ScreenWidth = w;
+			Global::ScreenHeight = h;
 			SetEGLWindowLocation(x, y, w, h);
 		}
 }
@@ -369,6 +371,8 @@ extern "C"
 }
 
 void main(){
+	Global::ScreenWidth =600;
+	Global::ScreenHeight = 600;
 	Creategame();
 	Game2D* game = Game2D::GetInstance();
 	Delete(game);

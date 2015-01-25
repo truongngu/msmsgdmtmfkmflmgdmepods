@@ -1,7 +1,17 @@
-﻿Build started 1/24/2015 10:39:04 AM.
+﻿Build started 1/24/2015 9:01:57 PM.
      1>Project "F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\Game2DDemo\Game2DDemo.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\ATI /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Sound\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Vorbis\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Freetype /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Freetype\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Box2D /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug_ATI\\" /Fd"Debug_ATI\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\Main.cpp
+         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\ATI /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Sound\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Vorbis\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Freetype /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Nvidia\Freetype\include /IF:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Include\Box2D /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug_ATI\\" /Fd"Debug_ATI\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\Game2D.cpp ..\..\Source\GamePlay.cpp ..\..\Source\Main.cpp ..\..\Source\MyStateConfig.cpp ..\..\Source\pch.cpp
+         pch.cpp
+         MyStateConfig.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\source\mystateconfig.cpp(20): warning C4101: 'numEntity' : unreferenced local variable
          Main.cpp
      1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
                  f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\debugdefine.h(17) : see previous definition of 'MAXINT'
@@ -12,8 +22,25 @@
      1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
      1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
      1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\source\main.cpp(194): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
-     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\source\main.cpp(195): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\source\main.cpp(196): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\source\main.cpp(197): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+         GamePlay.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Game2D.cpp
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\project\branches\spriteeditor\gamedemo\win32\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
        Link:
          G:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\BIN-ATI\Game.dll" /INCREMENTAL /NOLOGO /LIBPATH:F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Lib\ATI /LIBPATH:F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\Lib\Framework libEGL.lib libGLESv2.lib freetype253_D.lib assimp.lib theora_static.lib Utilities.lib SOIL.lib OpenGL32.lib 2DGameFramework.lib OpenAL32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\BIN-ATI\Game.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\VVFrameWorkProject\GameFramework\Project\branches\SpriteEditor\GameDemo\Win32\\BIN-ATI\Game.lib" /MACHINE:X86 /DLL Debug_ATI\Game2D.obj
          Debug_ATI\GamePlay.obj
@@ -100,4 +127,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.84
+Time Elapsed 00:00:06.57
