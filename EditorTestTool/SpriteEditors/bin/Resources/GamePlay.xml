@@ -1,4 +1,4 @@
-<CONFIG name="GamePlayu">
+<CONFIG name="GamePlay">
   <ENTITY_LIST>
     <ENTITY>
       <TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
@@ -13,11 +13,11 @@
     <ENTITY>
       <TEXTURE_PATH>Resources/Textures/sogoku.tga</TEXTURE_PATH>
       <CLASS_NAME>AnimatedSprite</CLASS_NAME>
-      <SPRITE_ATTRIBUTE fps="12" width="4" height="4" num_spriteX="5" num_spriteY="1" total_sprite="5" />
+      <SPRITE_ATTRIBUTE fps="50" width="4" height="4" num_spriteX="5" num_spriteY="1" total_sprite="5" />
       <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
       <FRAME_INFO num_frame="0" />
       <CLONE_INFO num_clone="1">
-        <CLONE name="Songoku" x="0" y="0" z="0.1" usedata="0" />
+        <CLONE name="Songoku" x="0" y="0" z="1" usedata="0" />
       </CLONE_INFO>
     </ENTITY>
     <ENTITY>
@@ -27,17 +27,27 @@
       <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
       <FRAME_INFO num_frame="0" />
       <CLONE_INFO num_clone="1">
-        <CLONE name="OngCong" x="4" y="5" z="1" usedata="0" />
+        <CLONE name="OngCong" x="4" y="5" z="-2" usedata="0" />
       </CLONE_INFO>
     </ENTITY>
     <ENTITY>
       <TEXTURE_PATH>Resources/Textures/ground.tga</TEXTURE_PATH>
       <CLASS_NAME>AnimatedSprite</CLASS_NAME>
-      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SPRITE_ATTRIBUTE fps="12" width="4" height="4" num_spriteX="1" num_spriteY="1" total_sprite="1" />
       <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
       <FRAME_INFO num_frame="0" />
       <CLONE_INFO num_clone="1">
-        <CLONE name="EntityTN" x="10" y="10" z="0.01" usedata="0" />
+        <CLONE name="EntityTN" x="10" y="10" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/bird.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="5" height="5" num_spriteX="4" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="Bird" x="0" y="0" z="1" usedata="0" />
       </CLONE_INFO>
     </ENTITY>
   </ENTITY_LIST>

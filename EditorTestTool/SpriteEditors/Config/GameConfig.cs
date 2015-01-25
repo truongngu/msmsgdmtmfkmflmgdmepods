@@ -97,7 +97,9 @@ namespace SpriteEditor
 
                     TEXTURE_PATH.InnerText = infor.TexturePath;
                     CLASS_NAME.InnerText = infor.ClassName;
-                    SPRITE_ATTRIBUTE.SetAttribute("fps", infor.Fps.ToString());
+                    String fps = infor.Fps.ToString();
+                    fps=fps.Replace(",", ".");
+                    SPRITE_ATTRIBUTE.SetAttribute("fps", fps);
                     SPRITE_ATTRIBUTE.SetAttribute("width", infor.Width.ToString());
                     SPRITE_ATTRIBUTE.SetAttribute("height", infor.Height.ToString());
                     SPRITE_ATTRIBUTE.SetAttribute("num_spriteX", infor.NumSpriteX.ToString());

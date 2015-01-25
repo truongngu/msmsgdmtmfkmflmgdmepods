@@ -1,0 +1,30 @@
+3
+//Texture
+"Resources/Textures/GamePlay/background.tga"
+Sprite
+1.0 3.5 2 1 1 1
+"Resources/Shaders/SpriteShaderVS.vsh"
+1
+-1.7 -1.0 -0.1 0
+"Resources/Textures/GamePlay/sogoku.tga"
+Hero
+8.0 0.3 0.3 5 1 5
+"Resources/Shaders/SpriteShaderVS.vsh"
+3
+-1.5 -0.5 0.0001 0
+-1.5 -0.7 0.0002 0
+-1.5 -0.9 0.0003 0
+"Resources/Textures/GamePlay/zombie.tga"
+Zombie
+8.0 0.3 0.3 5 1 5
+"Resources/Shaders/SpriteShaderVS.vsh"
+9
+0.5.0 -0.5 0.0001 0
+0.5 -0.7 0.0002 0
+0.5 -0.9 0.0003 0
+0.9 -0.5 0.0001 0
+0.9 -0.7 0.0002 0
+0.9 -0.9 0.0003 0
+1.2 -0.5 0.0001 0
+1.2 -0.7 0.0002 0
+1.2 -0.9 0.0003 0

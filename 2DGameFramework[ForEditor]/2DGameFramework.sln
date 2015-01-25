@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utilities", "Utilities\Utilities.vcxproj", "{0D44529E-F7DD-4454-8EAD-9AFD857F53B4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2DGameFramework", "..\2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj", "{82E53E46-BB8C-41B5-A636-5165FF8F25CD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2DGameFramework", "2DGameFramework - SVN\2DGameFramework\2DGameFramework.vcxproj", "{82E53E46-BB8C-41B5-A636-5165FF8F25CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
