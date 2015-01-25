@@ -65,6 +65,7 @@
     <Compile Include="Config\FrameInfor.cs" />
     <Compile Include="Config\SpriteInfor.cs" />
     <Compile Include="Config\TypeConverter.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="WpfPropertyGrid.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

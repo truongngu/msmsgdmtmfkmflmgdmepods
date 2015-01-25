@@ -13,7 +13,7 @@
     <ENTITY>
       <TEXTURE_PATH>Resources/Textures/sogoku.tga</TEXTURE_PATH>
       <CLASS_NAME>AnimatedSprite</CLASS_NAME>
-      <SPRITE_ATTRIBUTE fps="12" width="10" height="10" num_spriteX="5" num_spriteY="1" total_sprite="5" />
+      <SPRITE_ATTRIBUTE fps="5" width="10" height="10" num_spriteX="5" num_spriteY="1" total_sprite="5" />
       <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
       <FRAME_INFO num_frame="0" />
       <CLONE_INFO num_clone="1">
@@ -27,7 +27,7 @@
       <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
       <FRAME_INFO num_frame="0" />
       <CLONE_INFO num_clone="1">
-        <CLONE name="" x="4" y="5" z="1" usedata="0" />
+        <CLONE name="" x="4" y="5" z="0" usedata="0" />
       </CLONE_INFO>
     </ENTITY>
     <ENTITY>

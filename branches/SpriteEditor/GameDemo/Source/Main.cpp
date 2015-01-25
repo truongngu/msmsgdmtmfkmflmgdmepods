@@ -271,13 +271,36 @@ extern "C"
 		}
 }
 
+extern "C"
+{
+	__declspec(dllexport)
+		int MoveTheSelectedEntity(WCHAR* name, float* eX, float* eY, float deltax, float deltay){
+			State* curState = StateManager::GetInstance()->GetCurrentState();
+			Sprite* picked = 0;
+			if (curState && curState->IsInit()){
+				State* curState = StateManager::GetInstance()->GetCurrentState();
+				if (curState && curState->IsInit()){
+					picked = (Sprite*)curState->GetSelectedEntity();
+					if (picked){
+						Vector3 pos;
+						pos = picked->GetPosition();
+						picked->SetPosition(Vector3(pos.x + deltax, pos.y + deltay, pos.z));
+						pos = picked->GetPosition();
+						*eX = pos.x;
+						*eY = pos.y;
+						strcpy((char*)name, picked->GetName().c_str());
+					}
+				}
+			}
 
-
+			return picked != 0;
+		}
+}
 
 extern "C"
 {
 	__declspec(dllexport)
-		void GetPickingEntity(WCHAR* name,float x, float y){
+		int GetPickingEntity(WCHAR* name, float x, float y){
 			MouseData mouse;
 			mouse.position.x = x;
 			mouse.position.y = y;
@@ -296,11 +319,11 @@ extern "C"
 				Log(res.c_str());
 				Log(stringify(res.length()).c_str());
 			}
-			memcpy(name, res.c_str(), res.length());
-			name[res.length()] = NULL;
-			Log((char*)name);
+			
 			strcpy((char*)name, res.c_str());
 			Log((char*)name);
+
+			return picked != 0;
 		}
 }
 
@@ -324,9 +347,25 @@ extern "C"
 		}
 }
 
+//extern "C"
+//{
+//	__declspec(dllexport)
+//		void Rungame(){
+//			//ExecuteEGLWindow("UpdateGame", 0);
+//			Game2D* game = Game2D::GetInstance();
+//			if (game->IsInit())
+//			{
+//				DWORD currTime = GetTickCount();
+//				game->DrawFrame(&esContext, 1/ FPSLimitter::GetInstance()->GetFPSLimitValue());
+//				prevTickCountTime = currTime;
+//			}
+//		}
+//}
+
 extern "C"
 {
 	__declspec(dllexport)
+		
 		void Rungame(float deltaTime){
 			Game2D* game = Game2D::GetInstance();
 			if (game->IsInit())
