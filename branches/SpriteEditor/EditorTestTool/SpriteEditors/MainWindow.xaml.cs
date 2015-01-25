@@ -65,7 +65,7 @@ namespace SpriteEditor
         public static extern int RefreshRequestHandle();
 
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int Rungame();
+        public static extern void Rungame(float deltaTime);
 
         [DllImport("Game.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         public static extern int ExecuteGame(StringBuilder method, object param);
@@ -84,6 +84,7 @@ namespace SpriteEditor
         #endregion
 
         GameConfig game = new GameConfig();
+        DispatcherTimer timer = new DispatcherTimer();
 
         public MainWindow()
         {
@@ -198,17 +199,21 @@ namespace SpriteEditor
                 CreategameWithHandle(hwnd.Handle);
             }
 
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds((double)1000 / 60);
+          
+            timer.Interval = TimeSpan.FromSeconds((double)1/60.0f);
             timer.Tick += timer_Tick;
             timer.Start();
         }
 
         void timer_Tick(object sender, EventArgs e)
         {
+           
+            double timeStep = timer.Interval.TotalSeconds;
             try
             {
-                Rungame();
+                Rungame(0.03f);
+                //DrawFrame(1/60.0f);
+               // DrawFrame(1/60.0f);
             }
             catch (Exception ex)
             {
@@ -251,7 +256,7 @@ namespace SpriteEditor
                 CameraX -= deltaX;
                 CameraY += deltaY;
                // MoveCameraTo(CameraX, CameraY);
-                //MoveSelectedEntity(deltaX, -deltaY);
+                MoveSelectedEntity(deltaX, -deltaY);
             }
         }
 
@@ -265,8 +270,8 @@ namespace SpriteEditor
             StringBuilder name = new StringBuilder();
             ReleaseSelectedEntity();
             GetPickingEntity(name,(int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y);
-            Console.WriteLine(name.ToString());
-            MessageBox.Show(name.ToString(), "Name");
+            //Console.WriteLine(name.ToString());
+            //MessageBox.Show(name.ToString(), "Name");
             prevPos = e.GetPosition(lblRender);
             
         }

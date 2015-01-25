@@ -1,9 +1,0 @@
-//Texture
-"Resources/Textures/GamePlay/background.tga" 1
-//Mesh
-//Shader
-//VertextShader
-"Resources/Shaders/SpriteShaderVS.vsh" 
-//FragmentShaderList
-"Resources/Shaders/SpriteShaderFS.fsh"   
-//End

@@ -11,6 +11,7 @@
 #include "2DGameFramework\State.h"
 #include "2DGameFramework\StateManager.h"
 #include "2DGameFramework\Utils.h"
+#include "2DGameFramework\ConvertUtils.h"
 
 ESContext esContext;
 HANDLE  hThreadArray[1];
@@ -280,8 +281,8 @@ extern "C"
 			MouseData mouse;
 			mouse.position.x = x;
 			mouse.position.y = y;
-			string pickAt = "Game2D: Pick at " + std::to_string(x) + "," + std::to_string(y);
-			Log(pickAt.c_str());
+			/*string pickAt = "Game2D: Pick at " + std::to_string(x) + "," + std::to_string(y);
+			Log(pickAt.c_str());*/
 			string res = "";
 			Sprite* picked=0;
 			State* curState = StateManager::GetInstance()->GetCurrentState();
@@ -293,10 +294,13 @@ extern "C"
 				picked->SetShowBoundEnable(true);
 				res=picked->GetName();
 				Log(res.c_str());
-
+				Log(stringify(res.length()).c_str());
 			}
 			memcpy(name, res.c_str(), res.length());
-			name[res.length()] = '\0';
+			name[res.length()] = NULL;
+			Log((char*)name);
+			strcpy((char*)name, res.c_str());
+			Log((char*)name);
 		}
 }
 
@@ -323,10 +327,24 @@ extern "C"
 extern "C"
 {
 	__declspec(dllexport)
-		void Rungame(){
-			ExecuteEGLWindow("UpdateGame", 0);
+		void Rungame(float deltaTime){
+			Game2D* game = Game2D::GetInstance();
+			if (game->IsInit())
+			{
+				game->DrawFrame(&esContext, deltaTime);
+			}
 		}
 }
+
+extern "C"
+{
+	__declspec(dllexport)
+		void DrawFrame(float deltatime){
+			Game2D* game = Game2D::GetInstance();
+			game->DrawFrame(&esContext, deltatime);
+		}
+}
+
 
 extern "C"
 {
@@ -338,6 +356,7 @@ extern "C"
 			if (game->CreateGame(&esContext) != 0)
 			{
 				Delete(game);
+				Game::CleanMem();
 				return;
 			}
 			game->StartGame(&esContext);
@@ -365,7 +384,7 @@ extern "C"
 			
 			if (wcsstr(method, (LPCWSTR)"Rungame")){
 				MessageBox(esContext.hWnd, wcsstr(method, (LPCWSTR)"R"), (LPCWSTR)method, MB_OK);
-				Rungame();
+				
 			}
 		}
 }
