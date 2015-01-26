@@ -1,4 +1,4 @@
-﻿Build started 25/01/2015 6:00:37 CH.
+﻿Build started 26/01/2015 1:56:15 SA.
      1>Project "G:\Hoc Tap\Nam 4\GameClub\Project\GameDemo\Win32\Game2DDemo\Game2DDemo.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DemoGame2DWithOrthorCamera.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
@@ -130,4 +130,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:19.31
+Time Elapsed 00:00:06.63

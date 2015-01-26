@@ -55,20 +55,23 @@ namespace SpriteEditor
         public void LoadFromXml(XmlNode element)
         {
             Name = element.Attributes["name"].Value;
-            X = float.Parse(element.Attributes["x"].Value);
-            Y = float.Parse(element.Attributes["y"].Value);
-            Z = float.Parse(element.Attributes["z"].Value);
-            UserData = float.Parse(element.Attributes["usedata"].Value);
+            X = float.Parse(element.Attributes["x"].Value.Replace(".",","));
+            Y = float.Parse(element.Attributes["y"].Value.Replace(".", ","));
+            Z = float.Parse(element.Attributes["z"].Value.Replace(".", ","));
+            UserData = float.Parse(element.Attributes["usedata"].Value.Replace(".", ","));
+
+            MainWindow.cloneMap[Name] = this;
         }
         #endregion
 
         public void WriteToXml(XmlElement clone)
         {
             clone.SetAttribute("name", Name);
-            clone.SetAttribute("x", X.ToString());
-            clone.SetAttribute("y", Y.ToString());
-            clone.SetAttribute("z", Z.ToString());
-            clone.SetAttribute("usedata", UserData.ToString());
+            
+            clone.SetAttribute("x", X.ToString().Replace(",","."));
+            clone.SetAttribute("y", Y.ToString().Replace(",","."));
+            clone.SetAttribute("z", Z.ToString().Replace(",", "."));
+            clone.SetAttribute("usedata", UserData.ToString().Replace(",", "."));
         }
     }
 }
