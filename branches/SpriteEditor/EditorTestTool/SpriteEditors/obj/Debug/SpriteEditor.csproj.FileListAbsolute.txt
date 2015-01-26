@@ -140,3 +140,4 @@ G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteE
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.csproj.GenerateResource.Cache
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.exe
 G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.pdb
+G:\Hoc Tap\Nam 4\GameClub\Project\EditorTestTool\SpriteEditors\obj\Debug\SpriteEditor.csprojResolveAssemblyReference.cache
