@@ -21,6 +21,7 @@ namespace SpriteEditor
         string _name;
         List<EntityInfor> _entities = new List<EntityInfor>();
         MyCollection<EntityInfor> _entityCollection = new MyCollection<EntityInfor>();
+        public static int numUnNamed=0;
 
         Vector2 _cameraPosition;
 
@@ -185,11 +186,16 @@ namespace SpriteEditor
                 for (int i = 0; i < n; i++)
                 {
                     XmlElement clone = doc.CreateElement("CLONE");
+                    if (infor.Clones[i].Name.Equals(""))
+                    {
+                        infor.Clones[i].Name = GetUnNamedClone(doc);
+                    }
                     clone.SetAttribute("name", infor.Clones[i].Name);
                     clone.SetAttribute("x", infor.Clones[i].X.ToString());
                     clone.SetAttribute("y", infor.Clones[i].Y.ToString());
                     clone.SetAttribute("z", infor.Clones[i].Z.ToString());
                     clone.SetAttribute("usedata", infor.Clones[i].UserData.ToString());
+                    MainWindow.cloneMap[infor.Clones[i].Name]=infor.Clones[i];
                     CLONE_INFO.AppendChild(clone);
                 }
 
@@ -203,6 +209,30 @@ namespace SpriteEditor
                 entityList.AppendChild(entity);
             }
             doc.Save(path2XML);
+        }
+
+
+        public void EditClone(CloneInfor clone,String path)
+        {
+             XmlDocument doc = new XmlDocument();
+             doc.Load(path);
+            if (doc != null)
+            {
+                XmlElement node = (XmlElement)doc.SelectSingleNode("//CLONE[contains(@name,'"+clone.Name+"')]");
+                String x = clone.X.ToString().Replace(",", ".");
+                String y = clone.Y.ToString().Replace(",", ".");
+                node.SetAttribute("x", x);
+                node.SetAttribute("y", y);
+                doc.Save(path);
+            }
+        }
+
+        public string GetUnNamedClone(XmlDocument doc)
+        {
+            string name = "Unnamed";
+            XmlNodeList nodes = doc.SelectNodes("//CLONE[contains(@name,'Unnamed')]");
+            name += nodes.Count;
+            return name;
         }
     }
 }

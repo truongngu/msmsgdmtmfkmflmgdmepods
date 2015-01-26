@@ -288,6 +288,7 @@ extern "C"
 						pos = picked->GetPosition();
 						*eX = pos.x;
 						*eY = pos.y;
+						
 						strcpy((char*)name, picked->GetName().c_str());
 					}
 				}

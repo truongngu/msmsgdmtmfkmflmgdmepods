@@ -40,11 +40,14 @@ namespace SpriteEditor
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int MoveCameraTo(float x, float y);
 
+        [DllImport("Game.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int MoveTheSelectedEntity(StringBuilder name,float[] x, float[] y, float deltaX,float deltaY);
+
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int MoveSelectedEntity(float x, float y);
 
         [DllImport("Game.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern void GetPickingEntity(StringBuilder name,float x, float y);
+        public static extern int GetPickingEntity(StringBuilder name, float x, float y);
 
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ReleaseSelectedEntity();
@@ -85,7 +88,11 @@ namespace SpriteEditor
 
         GameConfig game = new GameConfig();
         DispatcherTimer timer = new DispatcherTimer();
+        public static Dictionary<String, CloneInfor> cloneMap = new Dictionary<String, CloneInfor>();
+        public static Dictionary<CloneInfor, EntityInfor> inforMap = new Dictionary<CloneInfor, EntityInfor>();
 
+        CloneInfor selectedClone=null;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -227,6 +234,13 @@ namespace SpriteEditor
         float CameraX = 0, CameraY = 0;
         private void lblRender_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (selectedClone != null)
+            {
+                string path = "../Resources/Gameplay.xml";
+                game.EditClone(selectedClone,path);
+                Global.ExpandCloneInfor("");
+            }
+               
             MouseRequestHandle(false, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
             //ReleaseSelectedEntity();
             isMouseDown = false;
@@ -256,7 +270,18 @@ namespace SpriteEditor
                 CameraX -= deltaX;
                 CameraY += deltaY;
                // MoveCameraTo(CameraX, CameraY);
-                MoveSelectedEntity(deltaX, -deltaY);
+                StringBuilder name = new StringBuilder();
+                float[] x=new float[1];
+                float[] y=new float [1];
+                if (MoveTheSelectedEntity(name, x, y, deltaX, -deltaY) == 1)
+                {
+                    String select = name.ToString();
+                    selectedClone = cloneMap[select];
+                    selectedClone.X = x[0];
+                    selectedClone.Y = y[0];
+                }
+              
+               
             }
         }
 
@@ -269,7 +294,11 @@ namespace SpriteEditor
             isMouseDown = true;
             StringBuilder name = new StringBuilder();
             ReleaseSelectedEntity();
-            GetPickingEntity(name,(int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y);
+            if (GetPickingEntity(name, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y)==1)
+            {
+                String   select= name.ToString();
+                selectedClone = cloneMap[select];
+            }
             prevPos = e.GetPosition(lblRender);
             
         }
