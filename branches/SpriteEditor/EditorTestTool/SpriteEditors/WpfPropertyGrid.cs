@@ -314,7 +314,7 @@ namespace System.Windows.Controls
         /// <summary>Updates the PropertyGrid's properties</summary>
         public void RefreshPropertyList()
         {
-            RefreshMethod.Invoke(Designer.PropertyInspectorView, new object[] { false });
+            RefreshMethod.Invoke(Designer.PropertyInspectorView, new object[] { true });
         }
 
         /// <summary>Traps the change of focused property and updates the help text</summary>

@@ -16,7 +16,20 @@ namespace SpriteEditor
         {
             if (propertitiesGrid != null)
             {
-                propertitiesGrid.RefreshPropertyList();
+                //propertitiesGrid.RefreshPropertyList();
+                object obj = propertitiesGrid.SelectedObject;
+                propertitiesGrid.SelectedObject = null;
+                propertitiesGrid.SelectedObject = obj;
+            }
+        }
+
+        public static void ChangePropertyObject(object nobj)
+        {
+            if (propertitiesGrid != null)
+            {
+                //propertitiesGrid.RefreshPropertyList();
+                object obj = propertitiesGrid.SelectedObject;
+                propertitiesGrid.SelectedObject = nobj;
             }
         }
 
