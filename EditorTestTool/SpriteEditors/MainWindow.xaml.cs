@@ -41,7 +41,7 @@ namespace SpriteEditor
         public static extern int MoveCameraTo(float x, float y);
 
         [DllImport("Game.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern int MoveTheSelectedEntity(StringBuilder name,float[] x, float[] y, float deltaX,float deltaY);
+        public static extern int MoveTheSelectedEntity(StringBuilder name,ref float x, ref float y, float deltaX,float deltaY);
 
         [DllImport("Game.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
         public static extern int MoveSelectedEntity(float x, float y);
@@ -154,7 +154,7 @@ namespace SpriteEditor
             unsafe
             {
                 SetHandleParent(infor.hWnd);
-                SetHandleLocaltion(infor.x, infor.y, infor.w, infor.h);
+                SetHandleLocaltion(infor.X, infor.Y, infor.W, infor.H);
                 CreategameWithHandle(infor.hWnd);
             }
         }
@@ -176,6 +176,7 @@ namespace SpriteEditor
             try
             {
                 //RefreshRequestHandle();
+                Global.RefreshEditorGrid();
                 SaveConfig();
                 KeyRequestHandle(13);
             }
@@ -212,9 +213,9 @@ namespace SpriteEditor
             timer.Start();
         }
 
+        int ddtimer = 0;
         void timer_Tick(object sender, EventArgs e)
         {
-           
             double timeStep = timer.Interval.TotalSeconds;
             try
             {
@@ -244,8 +245,15 @@ namespace SpriteEditor
             MouseRequestHandle(false, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
             //ReleaseSelectedEntity();
             isMouseDown = false;
+            if (isMoveEntity)
+            {
+                Global.RefreshEditorGrid();
+                isMoveEntity = false;
+            }
         }
 
+
+        bool isMoveEntity = false;
         private void lblRender_MouseMove(object sender, MouseEventArgs e)
         {
             //MouseRequestHandle(isMouseDown, (int)e.GetPosition(lblRender).X, (int)e.GetPosition(lblRender).Y, 1);
@@ -271,17 +279,16 @@ namespace SpriteEditor
                 CameraY += deltaY;
                // MoveCameraTo(CameraX, CameraY);
                 StringBuilder name = new StringBuilder();
-                float[] x=new float[1];
-                float[] y=new float [1];
-                if (MoveTheSelectedEntity(name, x, y, deltaX, -deltaY) == 1)
+                float x = 0;
+                float y = 0;
+                if (MoveTheSelectedEntity(name, ref x, ref y, deltaX, -deltaY) == 1)
                 {
                     String select = name.ToString();
                     selectedClone = cloneMap[select];
-                    selectedClone.X = x[0];
-                    selectedClone.Y = y[0];
+                    selectedClone.X = x;
+                    selectedClone.Y = y;
+                    isMoveEntity = true;
                 }
-              
-               
             }
         }
 
@@ -298,6 +305,11 @@ namespace SpriteEditor
             {
                 String   select= name.ToString();
                 selectedClone = cloneMap[select];
+                Global.ChangePropertyObject(selectedClone);
+            }
+            else
+            {
+                Global.ChangePropertyObject(game);
             }
             prevPos = e.GetPosition(lblRender);
             
