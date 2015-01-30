@@ -1,0 +1,79 @@
+﻿Build started 1/28/2015 12:03:41 AM.
+     1>Project "F:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\Game2DDemo\Game2DDemo.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DemoGame2DWithOrthorCamera.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\ATI /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\include /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\Nvidia\Sound\include /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\Nvidia\Vorbis\include /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\Nvidia\Freetype /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\Nvidia\Freetype\include /IF:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\\Include\Box2D /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\Game2D.cpp ..\..\Source\GamePlay.cpp ..\..\Source\Main.cpp ..\..\Source\MyStateConfig.cpp ..\..\Source\pch.cpp AssemblyInfo.cpp
+         AssemblyInfo.cpp
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(1): error C2871: 'System' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(2): error C2653: 'System' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(2): error C2871: 'Reflection' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(3): error C2653: 'System' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(3): error C2871: 'CompilerServices' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(4): error C2653: 'System' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(4): error C2871: 'InteropServices' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(5): error C2653: 'System' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(5): error C2871: 'Permissions' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(12): error C2337: 'AssemblyTitleAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(13): error C2337: 'AssemblyDescriptionAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(14): error C2337: 'AssemblyConfigurationAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(15): error C2337: 'AssemblyCompanyAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(16): error C2337: 'AssemblyProductAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(17): error C2337: 'AssemblyCopyrightAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(18): error C2337: 'AssemblyTrademarkAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(19): error C2337: 'AssemblyCultureAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(32): error C2337: 'AssemblyVersionAttribute' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(34): error C2337: 'ComVisible' : attribute not found
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\game2ddemo\assemblyinfo.cpp(36): error C2337: 'CLSCompliantAttribute' : attribute not found
+         pch.cpp
+         MyStateConfig.cpp
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\mystateconfig.cpp(20): warning C4101: 'numEntity' : unreferenced local variable
+         Main.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\debugdefine.h(17) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(197): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(198): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\game2ddemo.h(7): error C2871: 'System' : a namespace with this name does not exist
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\game2ddemo.h(10): error C2059: syntax error : 'public'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\game2ddemo.h(10): error C2143: syntax error : missing ';' before '{'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\game2ddemo.h(10): error C2447: '{' : missing function header (old-style formal list?)
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(442): error C2653: 'GameInstance' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(442): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(444): warning C4508: 'Game2DDemo::GameInstance' : function should return a value; 'void' return type assumed
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(445): error C2653: 'GameInstance' : is not a class or namespace name
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\source\main.cpp(445): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         GamePlay.cpp
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Game2D.cpp
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(46): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\utilities\mathex.h(91): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\debugdefine.h(17): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(52): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\entity2d.h(59): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\vvframeworkproject\gameframework\backup_27_1_2015_23_25\spriteeditor\editortesttool\include\2dgameframework\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+     1>Done Building Project "F:\VVFrameWorkProject\GameFramework\Backup_27_1_2015_23_25\SpriteEditor\EditorTestTool\Game2DDemo\Game2DDemo.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.12
