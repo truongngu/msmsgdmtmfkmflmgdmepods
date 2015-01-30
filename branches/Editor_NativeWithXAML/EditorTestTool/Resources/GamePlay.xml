@@ -1,0 +1,64 @@
+<CONFIG name="GamePlay">
+  <ENTITY_LIST>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/GamePlay/background.tga</TEXTURE_PATH>
+      <CLASS_NAME>Back</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="64" width="25" height="35" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="Background1" x="2.244582" y="3.970276" z="-1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/pipe.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="" x="0" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/bird.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="" x="0" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/pipe.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="" x="10" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/pipe.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="" x="0" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+    <ENTITY>
+      <TEXTURE_PATH>Resources/Textures/sogoku.tga</TEXTURE_PATH>
+      <CLASS_NAME>AnimatedSprite</CLASS_NAME>
+      <SPRITE_ATTRIBUTE fps="12" width="1" height="1" num_spriteX="1" num_spriteY="1" total_sprite="1" />
+      <SHADER vertex="Resources/Shaders/SpriteShaderVS.vsh" fragment="Resources/Shaders/SpriteShaderFS.fsh" />
+      <FRAME_INFO num_frame="0" />
+      <CLONE_INFO num_clone="1">
+        <CLONE name="" x="0" y="0" z="1" usedata="0" />
+      </CLONE_INFO>
+    </ENTITY>
+  </ENTITY_LIST>
+</CONFIG>
