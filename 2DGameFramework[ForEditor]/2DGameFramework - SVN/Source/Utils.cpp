@@ -179,6 +179,7 @@ unsigned int Randy=RANDOMSEEDY;
 unsigned int Randz=RANDOMSEEDZ; 
 unsigned int Randw;
 unsigned int GetARandomNumber(void) {
+	srand(time(NULL));
     unsigned int t = Randx ^ (Randx << 11);
     Randx = Randy; Randy = Randz; Randz = Randw;
     return Randw = Randw ^ (Randw >> 19) ^ t ^ (t >> 8);
