@@ -32,7 +32,7 @@ protected:
 	int beginFrame;
 
 	bool isShowBound;
-	void CloneAttribute(Sprite*);
+	virtual void CloneAttribute(Sprite*);
 public:
 	Sprite(void);
 	void SetIsHUD(){isHUD=true;}

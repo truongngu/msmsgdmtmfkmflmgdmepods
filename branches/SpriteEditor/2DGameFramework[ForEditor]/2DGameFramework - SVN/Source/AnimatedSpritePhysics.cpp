@@ -356,6 +356,6 @@ AnimatedSpritePhysics* AnimatedSpritePhysics::Create(){
 
 AnimatedSpritePhysics* AnimatedSpritePhysics::Clone(){
 	AnimatedSpritePhysics* clone = Create();
-	CloneAttribute(clone);
+	AnimatedSprite::CloneAttribute(clone);
 	return clone;
 }

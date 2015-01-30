@@ -118,7 +118,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Include\ATI;$(SolutionDir)\Include\include;$(SolutionDir)\Include\Sound\include;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Box2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include\ATI;$(SolutionDir)\Include\include;$(SolutionDir)\Include\Sound\include;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Box2D;$(SolutionDir)\Include\PNG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeaderFile />
     </ClCompile>
@@ -129,8 +129,8 @@
       <AdditionalDependencies>libEGL.lib;libGLESv2.lib;Utilities.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\ATI;$(SolutionDir)\Lib\Sound\Win64;$(SolutionDir)\Lib\Sound\Win32;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;$(SolutionDir)\Lib\Box2D;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;OpenAL32.lib;freetype253_D.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\ATI;$(SolutionDir)\Lib\Sound\Win64;$(SolutionDir)\Lib\Sound\Win32;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\PNG;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;OpenAL32.lib;freetype253_D.lib;Box2D.lib;LibPNG.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">

@@ -11,6 +11,7 @@ protected:
 	bool isAnimating;
 	bool isLoop;
 protected:
+	virtual void CloneAttribute(AnimatedSprite*);
 public:
 	AnimatedSprite();
 	~AnimatedSprite();
@@ -21,6 +22,7 @@ public:
 	virtual void setFrameName(char* frameName);
 	virtual void addFrame(char*, vector<int> dirFrame);
 	virtual void animate(char*, bool loop = true);
+	virtual string GetFrameName();
 	virtual AnimatedSprite* Create();
 	virtual AnimatedSprite* Clone();
 };
