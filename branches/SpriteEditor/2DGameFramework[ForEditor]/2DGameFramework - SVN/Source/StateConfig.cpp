@@ -194,11 +194,14 @@ void StateConfig::ReadXMLConfig(const char* path2Config){
 			while (frame_ChildNode != 0 && numFrameAnimation>0){
 				int posFrame;
 				int iPos = 0;
+				int length = strlen(frame_ChildNode->value());
 				vector<int> frameContent = vector<int>();
-				for (int i = 0; i < numFrameAnimation; i++){
+				while (iPos<length)
+				{
 					iPos = ScanNumberInt32(frame_ChildNode->value(), &posFrame, iPos);
 					frameContent.push_back(posFrame);
 				}
+				
 				infor->addFrame(string(frame_ChildNode->first_attribute("name")->value()), frameContent);
 				frame_ChildNode=frame_ChildNode->next_sibling("FRAME");
 			}

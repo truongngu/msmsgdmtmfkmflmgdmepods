@@ -74,6 +74,10 @@ void AnimatedSprite::setFrameName(std::string frameName){
 	this->frameName = frameName;
 }
 
+string AnimatedSprite::GetFrameName(){
+	return frameName;
+}
+
 void AnimatedSprite::addFrame(std::string frameName, vector<int> dirFrame){
 	registerFrame[frameName] = dirFrame;
 }
@@ -92,6 +96,13 @@ void AnimatedSprite::animate(char* frame, bool loop){
 	isLoop = loop;
 }
 
+void AnimatedSprite::CloneAttribute(AnimatedSprite* sp){
+	Sprite::CloneAttribute(sp);
+	sp->registerFrame.insert(registerFrame.begin(), registerFrame.end());
+	sp->frameName = frameName;
+	sp->animate((char*)frameName.c_str());
+}
+
 AnimatedSprite* AnimatedSprite::Create(){
 	return new AnimatedSprite();
 }
@@ -99,7 +110,6 @@ AnimatedSprite* AnimatedSprite::Create(){
 AnimatedSprite* AnimatedSprite::Clone(){
 	AnimatedSprite* sprite = new AnimatedSprite();
 	CloneAttribute(sprite);
-
 	return sprite;
 
 }

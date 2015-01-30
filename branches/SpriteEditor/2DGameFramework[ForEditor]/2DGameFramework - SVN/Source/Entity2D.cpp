@@ -149,6 +149,8 @@ void Entity2D::StopFlying()
 
 bool Entity2D::IsPicked(Vector2 pickingPos,BaseCamera* cam)
 {
+	if (!isActiveInGame || mPosition.z>cam->GetPosition().z)
+		return false;
 	Vector3 pos=ConvertCoordinate2D3DByZIndex(cam,pickingPos,mPosition.z);
 	
 
