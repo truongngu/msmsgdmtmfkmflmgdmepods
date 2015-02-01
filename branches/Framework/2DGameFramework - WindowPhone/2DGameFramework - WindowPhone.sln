@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utilities", "Utilities\Utilities.vcxproj", "{1B246CEF-AED0-4A05-8647-9C09B50441EE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2DGameFramework", "2DGameFramework\2DGameFramework.vcxproj", "{70B48AEF-80D6-4EF4-9432-81FE85C490E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_ARM|ARM = Debug_ARM|ARM
+		Debug_ARM|Win32 = Debug_ARM|Win32
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug_ARM|ARM.ActiveCfg = Debug|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug_ARM|ARM.Build.0 = Debug|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug_ARM|Win32.ActiveCfg = Debug|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug_ARM|Win32.Build.0 = Debug|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug|ARM.ActiveCfg = Debug|Win32
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug|ARM.Build.0 = Debug|Win32
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Debug|Win32.Build.0 = Debug|Win32
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Release|ARM.ActiveCfg = Release|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Release|ARM.Build.0 = Release|ARM
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Release|Win32.ActiveCfg = Release|Win32
+		{1B246CEF-AED0-4A05-8647-9C09B50441EE}.Release|Win32.Build.0 = Release|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug_ARM|ARM.ActiveCfg = Debug|ARM
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug_ARM|ARM.Build.0 = Debug|ARM
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug_ARM|Win32.ActiveCfg = Debug|ARM
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug_ARM|Win32.Build.0 = Debug|ARM
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug_ARM|Win32.Deploy.0 = Debug|ARM
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug|ARM.ActiveCfg = Debug|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug|Win32.Build.0 = Debug|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Debug|Win32.Deploy.0 = Debug|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Release|ARM.ActiveCfg = Release|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Release|Win32.ActiveCfg = Release|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Release|Win32.Build.0 = Release|Win32
+		{70B48AEF-80D6-4EF4-9432-81FE85C490E0}.Release|Win32.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

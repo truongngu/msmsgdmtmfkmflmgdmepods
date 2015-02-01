@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <!-- <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration> -->
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <!--  <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration> -->
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{70b48aef-80d6-4ef4-9432-81fe85c490e0}</ProjectGuid>
+    <RootNamespace>_2DGameFramework</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <XapOutputs>true</XapOutputs>
+    <XapFilename>2DGameFramework_$(Configuration)_$(Platform).xap</XapFilename>
+    <WinMDAssembly>true</WinMDAssembly>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\BIN\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>$(SolutionDir)\BIN-ARM</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\PNG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <PrecompiledHeaderOutputFile />
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\PNG\X86;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <PrecompiledHeaderOutputFile />
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\AnimatedSprite.cpp" />
+    <ClCompile Include="..\..\Source\AnimatedSpritePhysics.cpp" />
+    <ClCompile Include="..\..\Source\BaseCamera.cpp" />
+    <ClCompile Include="..\..\Source\Camera.cpp" />
+    <ClCompile Include="..\..\Source\DDS.cpp" />
+    <ClCompile Include="..\..\Source\Direct3DBase.cpp" />
+    <ClCompile Include="..\..\Source\Entity2D.cpp" />
+    <ClCompile Include="..\..\Source\EntityFactory.cpp" />
+    <ClCompile Include="..\..\Source\FPSLimitter.cpp" />
+    <ClCompile Include="..\..\Source\Game.cpp" />
+    <ClCompile Include="..\..\Source\Global.cpp" />
+    <ClCompile Include="..\..\Source\InputHandler.cpp" />
+    <ClCompile Include="..\..\Source\Loader.cpp" />
+    <ClCompile Include="..\..\Source\LookAtCamera.cpp" />
+    <ClCompile Include="..\..\Source\Main.cpp" />
+    <ClCompile Include="..\..\Source\Mesh2D.cpp" />
+    <ClCompile Include="..\..\Source\Model2D.cpp" />
+    <ClCompile Include="..\..\Source\PathFinder.cpp" />
+    <ClCompile Include="..\..\Source\RectangleMesh.cpp" />
+    <ClCompile Include="..\..\Source\Renderer.cpp" />
+    <ClCompile Include="..\..\Source\Resource.cpp" />
+    <ClCompile Include="..\..\Source\ResourceManager.cpp" />
+    <ClCompile Include="..\..\Source\Shader.cpp" />
+    <ClCompile Include="..\..\Source\SoundManager.cpp" />
+    <ClCompile Include="..\..\Source\Sprite.cpp" />
+    <ClCompile Include="..\..\Source\State.cpp" />
+    <ClCompile Include="..\..\Source\StateConfig.cpp" />
+    <ClCompile Include="..\..\Source\StateManager.cpp" />
+    <ClCompile Include="..\..\Source\TextRenderer.cpp" />
+    <ClCompile Include="..\..\Source\Texture.cpp" />
+    <ClCompile Include="..\..\Source\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Source\RapidXML_license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\AnimatedSprite.h" />
+    <ClInclude Include="..\..\Source\AnimatedSpritePhysic.h" />
+    <ClInclude Include="..\..\Source\BaseCamera.h" />
+    <ClInclude Include="..\..\Source\BasicTimer.h" />
+    <ClInclude Include="..\..\Source\Camera.h" />
+    <ClInclude Include="..\..\Source\ConvertUtils.h" />
+    <ClInclude Include="..\..\Source\DDS.h" />
+    <ClInclude Include="..\..\Source\DebugDefine.h" />
+    <ClInclude Include="..\..\Source\Direct3DBase.h" />
+    <ClInclude Include="..\..\Source\DirectXHelper.h" />
+    <ClInclude Include="..\..\Source\Entity2D.h" />
+    <ClInclude Include="..\..\Source\EntityFactory.h" />
+    <ClInclude Include="..\..\Source\FPSLimiter.h" />
+    <ClInclude Include="..\..\Source\Game.h" />
+    <ClInclude Include="..\..\Source\Global.h" />
+    <ClInclude Include="..\..\Source\InputHandler.h" />
+    <ClInclude Include="..\..\Source\Loader.h" />
+    <ClInclude Include="..\..\Source\LookAtCamera.h" />
+    <ClInclude Include="..\..\Source\Mesh2D.h" />
+    <ClInclude Include="..\..\Source\Model2D.h" />
+    <ClInclude Include="..\..\Source\PathFinder.h" />
+    <ClInclude Include="..\..\Source\rapidxml.hpp" />
+    <ClInclude Include="..\..\Source\rapidxml_iterators.hpp" />
+    <ClInclude Include="..\..\Source\rapidxml_print.hpp" />
+    <ClInclude Include="..\..\Source\rapidxml_utils.hpp" />
+    <ClInclude Include="..\..\Source\RectangleMesh.h" />
+    <ClInclude Include="..\..\Source\Renderer.h" />
+    <ClInclude Include="..\..\Source\Resource.h" />
+    <ClInclude Include="..\..\Source\ResourceManager.h" />
+    <ClInclude Include="..\..\Source\Shader.h" />
+    <ClInclude Include="..\..\Source\SoundManager.h" />
+    <ClInclude Include="..\..\Source\Sprite.h" />
+    <ClInclude Include="..\..\Source\State.h" />
+    <ClInclude Include="..\..\Source\StateConfig.h" />
+    <ClInclude Include="..\..\Source\StateMachine.h" />
+    <ClInclude Include="..\..\Source\StateManager.h" />
+    <ClInclude Include="..\..\Source\TextRenderer.h" />
+    <ClInclude Include="..\..\Source\Texture.h" />
+    <ClInclude Include="..\..\Source\Utils.h" />
+    <ClInclude Include="..\..\Source\Vertex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.vcxproj">
+      <Project>{1b246cef-aed0-4a05-8647-9c09b50441ee}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

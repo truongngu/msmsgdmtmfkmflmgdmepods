@@ -1,0 +1,24 @@
+﻿Build started 2/1/2015 5:27:52 PM.
+     1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\Utilities\Utilities.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Utilities\Math.cpp ..\..\Utilities\TGA.cpp ..\..\Utilities\esShader.cpp ..\..\Utilities\esUtil.cpp ..\..\Utilities\esUtil_win.cpp
+         Math.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         esUtil_win.cpp
+         esUtil.cpp
+         esShader.cpp
+         TGA.cpp
+       Lib:
+         G:\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\Lib.exe /OUT:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\\BIN\Utilities.lib" /NOLOGO Debug\esShader.obj
+         Debug\esUtil.obj
+         Debug\esUtil_win.obj
+         Debug\Math.obj
+         Debug\stdafx.obj
+         Debug\TGA.obj
+         Utilities.vcxproj -> E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\\BIN\Utilities.lib
+     1>Done Building Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\Utilities\Utilities.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.46

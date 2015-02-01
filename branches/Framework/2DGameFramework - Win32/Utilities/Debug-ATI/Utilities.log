@@ -1,0 +1,26 @@
+﻿Build started 2/1/2015 2:25:46 PM.
+     1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\Utilities\Utilities.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Nvidia" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug-ATI\\" /Fd"Debug-ATI\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Utilities\Math.cpp ..\..\Utilities\TGA.cpp ..\..\Utilities\esShader.cpp ..\..\Utilities\esUtil.cpp ..\..\Utilities\esUtil_win.cpp
+         Math.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         esUtil_win.cpp
+         esUtil.cpp
+         esShader.cpp
+         TGA.cpp
+       Lib:
+         G:\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\BIN\Utilities.lib" /NOLOGO "Debug-ATI\esShader.obj"
+         "Debug-ATI\esUtil.obj"
+         "Debug-ATI\esUtil_win.obj"
+         "Debug-ATI\Math.obj"
+         "Debug-ATI\stdafx.obj"
+         "Debug-ATI\TGA.obj"
+         Utilities.vcxproj -> E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\BIN\Utilities.lib
+     1>Done Building Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\Utilities\Utilities.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.36
