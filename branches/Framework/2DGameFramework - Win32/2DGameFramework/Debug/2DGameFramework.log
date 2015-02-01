@@ -1,0 +1,123 @@
+﻿Build started 2/1/2015 2:25:46 PM.
+     1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\2DGameFramework\2DGameFramework.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\ATI" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Sound\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Vorbis\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\PNG" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Freetype" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Freetype\include" /I"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Include\Box2D" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Source\AnimatedSprite.cpp ..\..\Source\AnimatedSpritePhysics.cpp ..\..\Source\BaseCamera.cpp ..\..\Source\Camera.cpp ..\..\Source\DDS.cpp ..\..\Source\Direct3DBase.cpp ..\..\Source\Entity2D.cpp ..\..\Source\EntityFactory.cpp ..\..\Source\FPSLimitter.cpp ..\..\Source\Game.cpp ..\..\Source\Global.cpp ..\..\Source\InputHandler.cpp ..\..\Source\Loader.cpp ..\..\Source\LookAtCamera.cpp ..\..\Source\Main.cpp ..\..\Source\Mesh2D.cpp ..\..\Source\Model2D.cpp ..\..\Source\PathFinder.cpp ..\..\Source\RectangleMesh.cpp ..\..\Source\Renderer.cpp ..\..\Source\ResourceManager.cpp ..\..\Source\Shader.cpp ..\..\Source\SoundManager.cpp ..\..\Source\Sprite.cpp ..\..\Source\State.cpp ..\..\Source\StateConfig.cpp ..\..\Source\StateManager.cpp ..\..\Source\TextRenderer.cpp ..\..\Source\Texture.cpp ..\..\Source\Utils.cpp
+         Texture.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(71): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(78): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\texture.cpp(209): warning C4018: '<' : signed/unsigned mismatch
+         TextRenderer.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(71): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(78): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\textrenderer.cpp(91): warning C4244: 'argument' : conversion from 'float' to 'FT_UInt', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\textrenderer.cpp(447): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\textrenderer.cpp(448): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\textrenderer.cpp(449): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\textrenderer.cpp(450): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+         State.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(71): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(78): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\state.cpp(114): warning C4018: '<' : signed/unsigned mismatch
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\state.cpp(119): warning C4018: '<' : signed/unsigned mismatch
+         Shader.cpp
+     1>c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452): warning C4005: 'MAXINT' : macro redefinition
+                 e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(71): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(78): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\shader.cpp(205): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\shader.cpp(206): warning C4244: '=' : conversion from 'int' to 'GLfloat', possible loss of data
+         Game.cpp
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(48): warning C4521: 'Vector2' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\utilities\mathex.h(93): warning C4521: 'Vector3' : multiple copy constructors specified
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\debugdefine.h(33): warning C4005: 'MAXINT' : macro redefinition
+                 c:\program files (x86)\windows kits\8.1\include\shared\basetsd.h(452) : see previous definition of 'MAXINT'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(71): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\entity2d.h(78): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\sprite.h(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>e:\backup\study\3dproject\directx11-winphone\2dgameframework - build cross-platform\source\game.cpp(16): warning C4305: 'argument' : truncation from 'int' to 'const bool'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Utils.cpp
+         StateManager.cpp
+         StateConfig.cpp
+         Sprite.cpp
+         SoundManager.cpp
+         ResourceManager.cpp
+         Renderer.cpp
+         RectangleMesh.cpp
+         PathFinder.cpp
+         Model2D.cpp
+         Mesh2D.cpp
+         Main.cpp
+         LookAtCamera.cpp
+         Loader.cpp
+         InputHandler.cpp
+         Global.cpp
+         FPSLimitter.cpp
+         EntityFactory.cpp
+         Entity2D.cpp
+         Direct3DBase.cpp
+         DDS.cpp
+         Camera.cpp
+         BaseCamera.cpp
+         AnimatedSpritePhysics.cpp
+         AnimatedSprite.cpp
+       Lib:
+         G:\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\BIN\2DGameFramework.lib" libogg_static.lib libvorbis_static.lib libvorbisfile_static.lib OpenAL32.lib freetype253_D.lib Box2D.lib /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\ATI" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\Sound\Win64" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\Sound\Win32" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\Vorbis" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\PNG" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\Freetype" /LIBPATH:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\Lib\Box2D" /NOLOGO Debug\AnimatedSprite.obj
+         Debug\AnimatedSpritePhysics.obj
+         Debug\BaseCamera.obj
+         Debug\Camera.obj
+         Debug\DDS.obj
+         Debug\Direct3DBase.obj
+         Debug\Entity2D.obj
+         Debug\EntityFactory.obj
+         Debug\FPSLimitter.obj
+         Debug\Game.obj
+         Debug\Global.obj
+         Debug\InputHandler.obj
+         Debug\Loader.obj
+         Debug\LookAtCamera.obj
+         Debug\Main.obj
+         Debug\Mesh2D.obj
+         Debug\Model2D.obj
+         Debug\PathFinder.obj
+         Debug\RectangleMesh.obj
+         Debug\Renderer.obj
+         Debug\Resource.obj
+         Debug\ResourceManager.obj
+         Debug\Shader.obj
+         Debug\SoundManager.obj
+         Debug\Sprite.obj
+         Debug\State.obj
+         Debug\StateConfig.obj
+         Debug\StateManager.obj
+         Debug\TextRenderer.obj
+         Debug\Texture.obj
+         Debug\Utils.obj
+         libogg_static.lib(bitwise.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+         2DGameFramework.vcxproj -> E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\\BIN\2DGameFramework.lib
+     1>Done Building Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - Win32\2DGameFramework\2DGameFramework.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:29.09
