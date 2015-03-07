@@ -1,4 +1,4 @@
-#include "../Utilities/utilities.h"
+#include "Utilities/utilities.h"
 #include "Game.h"
 #include "ResourceManager.h"
 #include "StateManager.h"
@@ -19,6 +19,7 @@ vector<string> Game::TouchDown=vector<string>();
 Game::Game()
 {
 	isActive=false;
+	isInit = false;
 	Game::KeyDown = vector<bool>(100);
 }
 
@@ -31,14 +32,14 @@ Game* Game::GetInstance()
 
 
 #ifdef Win32
-int Game::CreateGame(ESContext* esContext)
+int Game::CreateGame()
 {
 	ResourceManager* resourceManager = ResourceManager::GetInstance();
 	string path=Global::gameResourceDir+Global::Path2Resource;
 	if (resourceManager->Load(path)==0)
 	{
-		esInitContext(esContext);
-		esCreateWindow(esContext, "New Game", Global::ScreenWidth, Global::ScreenHeight, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
+		esInitContext(Global::esContext);
+		esCreateWindow(Global::esContext, "New Game", Global::ScreenWidth, Global::ScreenHeight, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
 		EntityFactory::InitEntity();
 		InputHandler::Init();
 		Global::currentCamera->SetPosition(Vector3(0.0f,1.0f,13.0f));
@@ -58,7 +59,7 @@ int Game::CreateGame(ESContext* esContext)
 	return -1;
 }
 
-void Game::Key(ESContext *esContext, unsigned char key, bool bIsPressed)
+void Game::Key(unsigned char key, bool bIsPressed)
 {
 	if (bIsPressed)
 	{
@@ -70,7 +71,7 @@ void Game::Key(ESContext *esContext, unsigned char key, bool bIsPressed)
 	}
 	switch (key){
 	case 27:
-		PostQuitMessage(0);
+		
 		break;
 	}
 	State* currentState=StateManager::GetInstance()->GetCurrentState();
@@ -82,7 +83,7 @@ void Game::Key(ESContext *esContext, unsigned char key, bool bIsPressed)
 	}
 }
 
-void Game::Mouse(ESContext* esContext, MouseData mouseData, bool bIsdown)
+void Game::Mouse(MouseData mouseData, bool bIsdown)
 {
 	State* currentState=StateManager::GetInstance()->GetCurrentState();
 	Game* game=Game::GetInstance();
@@ -95,7 +96,22 @@ void Game::Mouse(ESContext* esContext, MouseData mouseData, bool bIsdown)
 	}
 }
 
-void Game::DrawFrame(ESContext *esContext,float deltaTime)
+void Game::onTouch(int id, float x, float y)
+{
+	State* currentState = StateManager::GetInstance()->GetCurrentState();
+	Game* game = Game::GetInstance();
+	if (currentState != NULL)
+	{
+		if (game->isActive)
+		{
+			if (!currentState->IsRelease() && currentState->IsInit()){
+				currentState->onTouch(id, x, y);
+			}
+		}
+	}
+}
+
+void Game::DrawFrame(float deltaTime)
 {
 	FPSLimitter::GetInstance()->BeginFPS();
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -111,19 +127,19 @@ void Game::DrawFrame(ESContext *esContext,float deltaTime)
 		}
 		if (!currentState->IsRelease() && currentState->IsInit()){
 			currentState->Draw();
-			eglSwapBuffers(esContext->eglDisplay, esContext->eglSurface);
+			eglSwapBuffers(Global::esContext->eglDisplay, Global::esContext->eglSurface);
 		}
 	}
 	FPSLimitter::GetInstance()->EndFPS();
 }
 
-void Game::StartGame(ESContext* esContext)
+void Game::StartGame()
 {
-	esRegisterUpdateFunc(esContext, DrawFrame);
+	/*esRegisterUpdateFunc(esContext, DrawFrame);
 	esRegisterMouseFunc(esContext, Mouse);
-	esRegisterKeyFunc(esContext, Key);
+	esRegisterKeyFunc(esContext, Key);*/
 	Game::GetInstance()->isActive=true;
-	esMainLoop(esContext);
+	//esMainLoop(esContext);
 }
 #endif
 
@@ -164,6 +180,30 @@ void Game::onTouch(int id,float x,float y)
 				currentState->onTouch(id,x,y);
 			}
 		}
+	}
+}
+
+void Game::Key(unsigned char key, bool bIsPressed)
+{
+	if (bIsPressed)
+	{
+		InputHandler::SetKeyDown(key);
+	}
+	else
+	{
+		InputHandler::SetKeyUp(key);
+	}
+	switch (key){
+	case 27:
+		
+		break;
+	}
+	State* currentState=StateManager::GetInstance()->GetCurrentState();
+	Game* game=Game::GetInstance();
+
+	if (currentState != NULL)
+	{
+		currentState->Key(key, bIsPressed);
 	}
 }
 
@@ -236,20 +276,18 @@ void Game::onTouch(int id, float x, float y)
 }
 void Game::Key(unsigned char key, bool bIsPressed)
 {
-	//printf("Key: %d\n",key);
+#ifdef WindowStore
 	if (bIsPressed)
 	{
-		KeyDown[key] = true;
-		printf("Press Key:%d\n", key);
+		InputHandler::SetKeyDown(key);
 	}
 	else
 	{
-		KeyDown[key] = false;
-		printf("Release Key:%d\n", key);
+		InputHandler::SetKeyUp(key);
 	}
 	switch (key){
 	case 27:
-		//PostQuitMessage(0);
+		
 		break;
 	}
 	State* currentState = StateManager::GetInstance()->GetCurrentState();
@@ -257,11 +295,9 @@ void Game::Key(unsigned char key, bool bIsPressed)
 
 	if (currentState != NULL)
 	{
-		if (game->isActive)
-		{
-			currentState->Key(key, bIsPressed);
-		}
+		currentState->Key(key, bIsPressed);
 	}
+#endif
 }
 
 void Game::DrawFrame(float deltaTime)
@@ -331,5 +367,5 @@ void Game::CleanMem()
 
 bool Game::IsInit()
 {
-	return isInit;
+	return Game::GetInstance()->isInit;
 }

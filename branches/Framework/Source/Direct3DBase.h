@@ -2,14 +2,22 @@
 #include "DebugDefine.h"
 #if defined WindowPhone
 #include "DirectXHelper.h"
-
 // Helper class that initializes DirectX APIs for 3D rendering.
 class Direct3DBase abstract
 {
 public:
 	Direct3DBase();
-
+#if !defined WindowStore
 	virtual void Initialize(Windows::UI::Core::CoreWindow^ window);
+#endif
+#if defined WindowStore
+	virtual void Initialize(Windows::UI::Core::CoreWindow^ window, Windows::UI::Xaml::Controls::SwapChainPanel^ panel, float dpi);
+	virtual void SetLogicalSize(Windows::Foundation::Size logicalSize);
+	virtual void SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations currentOrientation);
+	virtual void SetDpi(float dpi);
+	virtual void SetCompositionScale(float compositionScaleX, float compositionScaleY);
+	virtual void ValidateDevice();
+#endif
 	virtual void HandleDeviceLost();
 	virtual void CreateDeviceResources();
 	virtual void CreateWindowSizeDependentResources();
@@ -40,6 +48,16 @@ protected:
 	Windows::Foundation::Size m_renderTargetSize;
 	Windows::Foundation::Rect m_windowBounds;
 	Platform::Agile<Windows::UI::Core::CoreWindow> m_window;
+#if defined WindowStore
+	Windows::UI::Xaml::Controls::SwapChainPanel^ m_panel;
+	float m_dpi;
+	Windows::Foundation::Size						m_logicalSize;
+	float											m_compositionScaleX;
+	float											m_compositionScaleY;
+	Windows::Graphics::Display::DisplayOrientations m_orientation;
+	DirectX::XMFLOAT4X4 m_orientationTransform3D;
+	D3D_FEATURE_LEVEL m_d3dFeatureLevel;
+#endif
 };
 
 

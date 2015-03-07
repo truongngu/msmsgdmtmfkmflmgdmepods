@@ -7,8 +7,14 @@ using namespace std;
 
 SoundManager* SoundManager::m_pThis = 0;
 
+#if !defined WindowPhone
 bool SoundManager::loadOGG(char *fileName, vector<char> &buffer, ALenum &format, ALsizei &freq)
 {
+#endif
+#if defined WindowPhone
+bool SoundManager::loadOGG(char *fileName, Platform::Array<byte>^ buffer)
+{
+#endif
 #if defined Win32 || defined Android
 	int endian = 0;                         // 0 for Little-Endian, 1 for Big-Endian
 	int bitStream;
@@ -87,6 +93,7 @@ bool SoundManager::loadOGG(char *fileName, vector<char> &buffer, ALenum &format,
 
 SoundManager::SoundManager()
 {
+#if defined Win32 || defined Android
 	m_pDevice = alcOpenDevice(NULL);
 	m_pContext = NULL;
 	if (!m_pDevice)
@@ -101,15 +108,37 @@ SoundManager::SoundManager()
 	}
 	count=0;
 	isSoundOn=true;
+#endif
+#if defined WindowPhone
+	// Create the XAudio2 Engine
+	UINT32 flags = 0;
+	DX::ThrowIfFailed(
+		XAudio2Create(&m_audioEngine, flags)
+		);
+
+	// Create the mastering voice
+	DX::ThrowIfFailed(
+		m_audioEngine->CreateMasteringVoice(
+		&m_masteringVoice,
+		XAUDIO2_DEFAULT_CHANNELS,
+		48000
+		)
+		);
+#endif
 }
 
 void SoundManager::releaseSource(SoundData sound)
 {
+#if defined Win32 || defined Android
 	if (sound.buffer)
 		alDeleteBuffers(1, &sound.buffer);
 	if (sound.source)
 		alDeleteSources(1, &sound.source);
 	sound.buffer = sound.source = 0;
+#endif
+#if defined WindowPhone
+	sound.Destroy();
+#endif
 }
 
 void SoundManager::DeleteSound(string soundname){
@@ -120,7 +149,6 @@ void SoundManager::DeleteSound(string soundname){
 		_soundList.erase(soundname);
 		Delete(sound);
 	}
-	
 }
 SoundManager::~SoundManager()
 {
@@ -133,11 +161,24 @@ SoundManager::~SoundManager()
 		iter++;
 	}
 	_soundList.clear();
+#if defined WindowPhone
+	if (m_masteringVoice != nullptr)
+	{
+		m_masteringVoice->DestroyVoice();
+		m_masteringVoice = nullptr;
+	}
+
+	if (m_audioEngine != nullptr)
+	{
+		m_audioEngine->Release();
+		m_audioEngine = nullptr;
+	}
+#endif
 }
 
 SoundData* SoundManager::LoadWAV(char* sound_name)
 {
-	//
+#if defined Win32 || defined Android
 	ALuint buffer_id, source_id;
 	ALsizei freq, size;
 	ALenum format;
@@ -176,6 +217,41 @@ SoundData* SoundManager::LoadWAV(char* sound_name)
 	else
 		result = _soundList[string(sound_name)];
 	return result;
+#endif
+#if defined WindowPhone
+	Platform::Array<byte>^ data;
+	SoundData* result = nullptr;
+	// check if loaded already
+	string path = string(sound_name);
+	// if not -> load
+
+	if (_soundList.count(string(sound_name)) < 1)
+	{
+		WAVEFORMATEX format;
+		data = loadWavFile((char*)path.c_str(), &format);
+		if (!data)
+			return 0;
+
+		result = new SoundData(data);
+
+		DX::ThrowIfFailed(
+			m_audioEngine->CreateSourceVoice(
+			&result->source,
+			&format,
+			0,
+			XAUDIO2_DEFAULT_FREQ_RATIO,
+			reinterpret_cast<IXAudio2VoiceCallback*>(&result->callbackHander),
+			nullptr,
+			nullptr
+			)
+			);
+
+		_soundList[string(sound_name)] = result;
+	}
+	else
+		result = _soundList[string(sound_name)];
+	return result;
+#endif
 }
 
 SoundData* SoundManager::LoadOGG(char* sound_name)
@@ -226,15 +302,69 @@ void SoundManager::PlayEffect(SoundData sound, bool loop)
 {
 	if (!isSoundOn)
 		return;
+#if defined Win32 || defined Android
 	alSourcePlay(sound.source);
+#endif
+#if defined WindowPhone
+	XAUDIO2_BUFFER playBuffer = { 0 };
+	playBuffer.AudioBytes = sound.buffer->Length;
+	playBuffer.pAudioData = sound.buffer->Data;
+	playBuffer.Flags = XAUDIO2_END_OF_STREAM;
+
+	//
+	// In case it is playing, stop it and flush the buffers.
+	//
+	HRESULT hr = sound.source->Stop();
+	if (SUCCEEDED(hr))
+	{
+		hr = sound.source->FlushSourceBuffers();
+	}
+
+	//
+	// Submit the sound buffer and (re)start (ignore any 'stop' failures)
+	//
+	hr = sound.source->SubmitSourceBuffer(&playBuffer);
+	if (SUCCEEDED(hr))
+	{
+		hr = sound.source->Start(0, XAUDIO2_COMMIT_NOW);
+	}
+#endif
 }
 
 void SoundManager::PlayMusic(SoundData sound, bool loop)
 {
 	if (!isSoundOn)
 		return;
+#if defined Win32 || defined Android
 	if (!isPlaying(sound))
 		alSourcePlay(sound.source);
+#endif
+#if defined WindowPhone
+	if (!isPlaying(sound)){
+		XAUDIO2_BUFFER playBuffer = { 0 };
+		playBuffer.AudioBytes = sound.buffer->Length;
+		playBuffer.pAudioData = sound.buffer->Data;
+		playBuffer.Flags = XAUDIO2_END_OF_STREAM;
+
+		//
+		// In case it is playing, stop it and flush the buffers.
+		//
+		HRESULT hr = sound.source->Stop();
+		if (SUCCEEDED(hr))
+		{
+			hr = sound.source->FlushSourceBuffers();
+		}
+
+		//
+		// Submit the sound buffer and (re)start (ignore any 'stop' failures)
+		//
+		hr = sound.source->SubmitSourceBuffer(&playBuffer);
+		if (SUCCEEDED(hr))
+		{
+			hr = sound.source->Start(0, XAUDIO2_COMMIT_NOW);
+		}
+	}
+#endif
 }
 
 void SoundManager::SetPositionAttribute(SoundData sound, Vector3 sound_position, Vector3 sound_velocity,
@@ -242,6 +372,7 @@ void SoundManager::SetPositionAttribute(SoundData sound, Vector3 sound_position,
 	Vector3 listener_orientation, Vector3 listener_up_vector
 	)
 {
+#if defined Win32 || defined Android
 	ALuint source = sound.source;
 	// Position of the source sound.
 	ALfloat SourcePos[] = { sound_position.x, sound_position.y, sound_position.z };
@@ -266,36 +397,80 @@ void SoundManager::SetPositionAttribute(SoundData sound, Vector3 sound_position,
 	alSourcef(source, AL_GAIN, 1.0f);
 	alSourcefv(source, AL_POSITION, SourcePos);
 	alSourcefv(source, AL_VELOCITY, SourceVel);
+#endif
 }
 
-
+#if !defined WindowPhone
 void SoundManager::SetSoundAttribute(SoundData sound, ALfloat pitch, ALfloat gain)
 {
 	ALuint source = sound.source;
 	alSourcef(source, AL_PITCH, pitch);
 	alSourcef(source, AL_GAIN, gain);
 }
+#endif
+#if defined WindowPhone
+void SoundManager::SetSoundAttribute(SoundData sound, float pitch, float gain)
+{
+	sound.pitch = pitch;
+	sound.gain = gain;
+}
+#endif
 
 void SoundManager::Pause(SoundData sound)
 {
+#if defined Win32 || defined Android
 	if (isPlaying(sound))
 		alSourcePause(sound.source);
+#endif
+#if defined WindowPhone
+	if (isPlaying(sound)){
+		HRESULT hr = sound.source->Stop();
+		if (SUCCEEDED(hr))
+		{
+			hr = sound.source->FlushSourceBuffers();
+		}
+	}
+#endif
 }
+
 void SoundManager::Stop(SoundData sound)
 {
+#if defined Win32 || defined Android
 	if (isPlaying(sound))
 		alSourceStop(sound.source);
+#endif
+#if defined WindowPhone
+	if (isPlaying(sound)){
+		HRESULT hr = sound.source->Stop();
+		if (SUCCEEDED(hr))
+		{
+			hr = sound.source->FlushSourceBuffers();
+		}
+	}
+#endif
 }
+
 bool SoundManager::isPlaying(SoundData sound)
 {
+#if defined Win32 || defined Android
 	ALenum sound_state;
 	alGetSourcei(sound.source, AL_SOURCE_STATE, &sound_state);
 	return (sound_state == AL_PLAYING);
+#endif
+#if defined WindowPhone
+	return sound.isPlaying;
+#endif
 }
 
+#if !defined WindowPhone
 bool SoundManager::loadWavFile(char* filename, unsigned char* &data, ALsizei* size, ALsizei* frequency, ALenum* format)
 {
-
+#endif
+#if defined WindowPhone
+Platform::Array<byte>^ SoundManager::loadWavFile(char* filename, WAVEFORMATEX* format)
+{
+#endif
+#if !defined WindowPhone
 	//Local Declarations
 	FILE* soundFile = NULL;
 	WAVE_Format wave_format;
@@ -371,16 +546,23 @@ bool SoundManager::loadWavFile(char* filename, unsigned char* &data, ALsizei* si
 	}
 	fclose(soundFile);
 	return true;
-}
+#endif
+#if defined WindowPhone
+	//convert to wchar*
+	std::wstring name = L"";
+	int lenght = strlen(filename);
+	for (int i = 0; i < lenght; i++){
+		name.push_back(filename[i]);
+	}
+	SoundFileReader nextSound(ref new Platform::String(name.c_str()));
+	*format = *nextSound.GetSoundFormat();
+	return nextSound.GetSoundData();
+#endif
+	}
 
 int SoundManager::Load()
 {
 	return 0;
-	//int err = -1;
-	//Sound*temp = LoadWAV("..\\Sound\\test.wav");
-	//if (!temp)
-	//	return err;
-	//listSound[count++] = temp;
 }
 
 void SoundManager::PlayEffect(string sound_name, bool loop)
@@ -392,24 +574,23 @@ void SoundManager::PlayEffect(string sound_name, bool loop)
 void SoundManager::PlayMusic(string sound_name, bool loop)
 {
 	if (_soundList[sound_name])
-	PlayMusic(*_soundList[sound_name], loop);
+		PlayMusic(*_soundList[sound_name], loop);
 }
-
 
 void SoundManager::Pause(string sound_name)
 {
 	if (_soundList[sound_name])
-	Pause(*_soundList[sound_name]);
+		Pause(*_soundList[sound_name]);
 }
 void SoundManager::Stop(string sound_name)
 {
 	if (_soundList[sound_name])
-	Stop(*_soundList[sound_name]);
+		Stop(*_soundList[sound_name]);
 }
 bool SoundManager::isPlaying(string sound_name)
 {
 	if (_soundList[sound_name])
-	return isPlaying(*_soundList[sound_name]);
+		return isPlaying(*_soundList[sound_name]);
 }
  
 void SoundManager::StopAll()
@@ -418,63 +599,78 @@ void SoundManager::StopAll()
 	while (iter != _soundList.end())
 	{
 		if (iter->second)
-		Stop(*iter->second);
+			Stop(*iter->second);
 		iter++;
 	}
 }
-
 
 void SoundManager::SetPositionAttribute(string sound_name, Vector3 sound_position, Vector3 sound_velocity,
 	Vector3 listener_position, Vector3 listener_velocity,
 	Vector3 listener_orientation, Vector3 listener_up_vector)
 {
+#if defined Win32 || defined Android
 	SoundData snd = *_soundList[sound_name];
 	SetPositionAttribute(snd,  sound_position,  sound_velocity,
 		 listener_position,  listener_velocity,
 		 listener_orientation,  listener_up_vector);
+#endif
 }
+
+#if !defined WindowPhone
 void SoundManager::SetSoundAttribute(string sound_name, ALfloat pitch, ALfloat gain)
 {
+#else 
+void SoundManager::SetSoundAttribute(string sound_name, float pitch, float gain)
+{
+#endif
+#if defined Win32 || defined Android
 	SoundData snd = *_soundList[sound_name];
 	SetSoundAttribute(snd, pitch, gain);
+#endif
 }
 
 
 void SoundManager::TurnOnSound(float volume)
 {
-#if defined Win32 || defined Android
 	map<string, SoundData*>::iterator iter = _soundList.begin();
 	while (iter != _soundList.end())
 	{
 		float newVolume = volume;
+#if defined Win32 || defined Android
 		alSourcef((*iter->second).source, AL_GAIN, newVolume);
+#endif
+#if defined WindowPhone
+		(*iter->second).volume = volume;
+		(*iter->second).source->SetVolume(volume);
+#endif
 		iter++;
 	}
 	isSoundOn=true;
-#endif
 }
 
 void SoundManager::TurnOffSound()
 {
-#if defined Win32 || defined Android
 	map<string, SoundData*>::iterator iter = _soundList.begin();
 	while (iter != _soundList.end())
 	{
 		float newVolume = 0.0f;
+#if defined Win32 || defined Android
 		alSourcef((*iter->second).source, AL_GAIN, newVolume);
+#endif
+#if defined WindowPhone
+		(*iter->second).volume = newVolume;
+		(*iter->second).source->SetVolume(newVolume);
+#endif
 		iter++;
 	}
-	isSoundOn=false;	
-#endif
+	isSoundOn = false;
 }
 
 void SoundManager::SetVolumeForSound(string sound_name,float volume)
 {
-#if defined Win32 || defined Android
 	SoundData snd = *_soundList[sound_name];
 	if (snd.source>0)
-		SetVolumeForSound(snd,volume);
-#endif
+		SetVolumeForSound(snd, volume);
 }
 
 void SoundManager::SetVolumeForSound(SoundData sound,float volume)
@@ -482,5 +678,8 @@ void SoundManager::SetVolumeForSound(SoundData sound,float volume)
 #if defined Win32 || defined Android
 	float newVolume = volume;
 	alSourcef(sound.source, AL_GAIN, newVolume);
+#endif
+#if defined WindowPhone
+	sound.source->SetVolume(volume);
 #endif
 }

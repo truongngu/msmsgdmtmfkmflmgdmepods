@@ -37,7 +37,7 @@ void MyRenderer::CreateWindowSizeDependentResources()
 
 void MyRenderer::Update(float timeTotal, float timeDelta)
 {
-#ifdef WindowPhoneWithoutXAML
+#if defined WindowPhoneWithoutXAML || defined WindowStore
 	using namespace Windows::Graphics::Display;
 	DirectX::XMFLOAT4X4 m_orientationTransform3D;
 	DisplayOrientations m_orientation = DisplayProperties::CurrentOrientation;
@@ -116,7 +116,8 @@ void MyRenderer::Render(float deltaTime)
 		m_renderTargetView.GetAddressOf(),
 		m_depthStencilView.Get()
 		);
-#ifdef WindowPhoneWithoutXAML
+
+#if defined WindowPhoneWithoutXAML && !defined WindowStore
 	CD3D11_VIEWPORT viewport(
 		0.0f,
 		0.0f,

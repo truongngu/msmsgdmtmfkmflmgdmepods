@@ -206,10 +206,6 @@ int Shaders::Load()
 	u_dy=glGetUniformLocation(program,"u_dy");
 #endif
 #if defined WindowPhone
-
-	using namespace Windows::UI::Core;
-	using namespace Windows::Phone::Input::Interop;
-	using namespace Windows::UI::Xaml;
 	BasicLoader loader = BasicLoader(Global::m_d3ddevice);
 	//load pixel shader
 	char pathVertex[MAX_LEN];

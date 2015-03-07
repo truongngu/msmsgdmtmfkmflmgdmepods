@@ -65,9 +65,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)\BIN\</OutDir>
+    <ExcludePath>$(ExcludePath);$(MSBuildFrameworkToolsPath);$(MSBuildFrameworkToolsPath32);$(VC_IncludePath);$(WindowsSDK_IncludePath);$(MSBuild_ExecutablePath);$(VC_LibraryPath_x86);</ExcludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <OutDir>$(SolutionDir)\BIN-ARM</OutDir>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildFrameworkToolsPath)</ExecutablePath>
+    <IncludePath>$(WP80ToolSetPath)include;$(WindowsSDK_IncludePath);</IncludePath>
+    <ExcludePath>$(ExcludePath);$(MSBuildFrameworkToolsPath)</ExcludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -75,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\PNG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\PNG;$(SolutionDir)\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAsWinRT>true</CompileAsWinRT>
       <PrecompiledHeaderOutputFile />
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -95,7 +99,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);$(SolutionDir)\Include\Box2D;$(SolutionDir)\include\Sound\AudioAl;$(SolutionDir)\include\Sound\Window8;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\PNG;$(SolutionDir)\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAsWinRT>true</CompileAsWinRT>
       <PrecompiledHeaderOutputFile>
       </PrecompiledHeaderOutputFile>
@@ -106,7 +110,7 @@
       <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Lib\Box2D;$(SolutionDir)\Lib\Sound;$(SolutionDir)\Lib\Vorbis;$(SolutionDir)\Lib\PNG\ARM;$(SolutionDir)\Lib\Freetype;%(AdditionalDependencies)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -173,11 +177,13 @@
     <ClCompile Include="..\..\Source\Mesh2D.cpp" />
     <ClCompile Include="..\..\Source\Model2D.cpp" />
     <ClCompile Include="..\..\Source\PathFinder.cpp" />
+    <ClCompile Include="..\..\Source\RandomAccessReader.cpp" />
     <ClCompile Include="..\..\Source\RectangleMesh.cpp" />
     <ClCompile Include="..\..\Source\Renderer.cpp" />
     <ClCompile Include="..\..\Source\Resource.cpp" />
     <ClCompile Include="..\..\Source\ResourceManager.cpp" />
     <ClCompile Include="..\..\Source\Shader.cpp" />
+    <ClCompile Include="..\..\Source\SoundFileReader.cpp" />
     <ClCompile Include="..\..\Source\SoundManager.cpp" />
     <ClCompile Include="..\..\Source\Sprite.cpp" />
     <ClCompile Include="..\..\Source\State.cpp" />
@@ -212,6 +218,7 @@
     <ClInclude Include="..\..\Source\Mesh2D.h" />
     <ClInclude Include="..\..\Source\Model2D.h" />
     <ClInclude Include="..\..\Source\PathFinder.h" />
+    <ClInclude Include="..\..\Source\RandomAccessReader.h" />
     <ClInclude Include="..\..\Source\rapidxml.hpp" />
     <ClInclude Include="..\..\Source\rapidxml_iterators.hpp" />
     <ClInclude Include="..\..\Source\rapidxml_print.hpp" />
@@ -221,6 +228,7 @@
     <ClInclude Include="..\..\Source\Resource.h" />
     <ClInclude Include="..\..\Source\ResourceManager.h" />
     <ClInclude Include="..\..\Source\Shader.h" />
+    <ClInclude Include="..\..\Source\SoundFileReader.h" />
     <ClInclude Include="..\..\Source\SoundManager.h" />
     <ClInclude Include="..\..\Source\Sprite.h" />
     <ClInclude Include="..\..\Source\State.h" />

@@ -8,6 +8,10 @@
 #if defined WindowPhone
 #include "ft2build.h"
 #include FT_FREETYPE_H
+
+struct ColorConstantBuffer{
+	Vector4 color;
+};
 #endif
 class TextRenderer
 {
@@ -25,7 +29,8 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11SamplerState> TexSamplerState;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> m_vertexBuffer;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> m_indexBuffer;
-	Microsoft::WRL::ComPtr<ID3D11Buffer> m_constantBuffer;
+	Microsoft::WRL::ComPtr<ID3D11Buffer> m_cameraBuffer;
+	Microsoft::WRL::ComPtr<ID3D11Buffer> m_colorBuffer;
 #endif
 	Shaders* textShader;
 

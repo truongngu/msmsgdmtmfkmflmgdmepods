@@ -100,13 +100,13 @@ void Mesh2D::Render(Shaders* shader)
 		0
 		);
 
-	m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	m_d3dContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 	m_d3dContext->DrawIndexed(
 		m_indexCount,
 		0,
 		0
-		);
+		);	
 #endif
 }
 

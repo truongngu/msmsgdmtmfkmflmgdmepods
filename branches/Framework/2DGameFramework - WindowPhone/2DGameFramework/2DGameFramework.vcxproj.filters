@@ -7,6 +7,12 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{a7a2c38b-27e8-45a7-9c93-31dfb986ba58}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\WinRT">
+      <UniqueIdentifier>{900316a9-7685-4e22-aa12-c179bbce4ddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WinRT">
+      <UniqueIdentifier>{e13790af-05f6-4d59-9efe-5a8f645b7600}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Main.cpp">
@@ -22,12 +28,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Camera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\DDS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Direct3DBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Entity2D.cpp">
@@ -66,9 +66,6 @@
     <ClCompile Include="..\..\Source\RectangleMesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Resource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -101,6 +98,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Utils.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DDS.cpp">
+      <Filter>Source Files\WinRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Direct3DBase.cpp">
+      <Filter>Source Files\WinRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Renderer.cpp">
+      <Filter>Source Files\WinRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SoundFileReader.cpp">
+      <Filter>Source Files\WinRT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RandomAccessReader.cpp">
+      <Filter>Source Files\WinRT</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,9 +172,6 @@
     <ClInclude Include="..\..\Source\Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\RectangleMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -199,25 +208,13 @@
     <ClInclude Include="..\..\Source\Entity2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\DirectXHelper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Direct3DBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\DebugDefine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\DDS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ConvertUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\BasicTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\BaseCamera.h">
@@ -228,6 +225,27 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\AnimatedSprite.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Direct3DBase.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DirectXHelper.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Renderer.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DDS.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BasicTimer.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SoundFileReader.h">
+      <Filter>Header Files\WinRT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RandomAccessReader.h">
+      <Filter>Header Files\WinRT</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

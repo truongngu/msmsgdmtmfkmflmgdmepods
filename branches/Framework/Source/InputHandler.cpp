@@ -1,7 +1,7 @@
 #include "InputHandler.h"
 #include "DebugDefine.h"
 
-#ifdef Win32
+#if defined Win32 || defined WindowStore
 bool InputHandler::KeyDown[255];
 bool InputHandler::KeyUp[255];
 MouseData InputHandler::mouseData;

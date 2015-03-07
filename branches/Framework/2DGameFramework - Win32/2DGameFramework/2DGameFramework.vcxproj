@@ -145,7 +145,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Include\ATI;$(SolutionDir)\Include\include;$(SolutionDir)\Include\Sound\include;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\PNG;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Box2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Include\ATI;$(SolutionDir)\Include\include;$(SolutionDir)\Include\Sound\include;$(SolutionDir)\Include\Vorbis\include;$(SolutionDir)\Include\PNG;$(SolutionDir)\Include\Freetype;$(SolutionDir)\Include\Freetype\include;$(SolutionDir)\Include\Box2D;$(SolutionDir)\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeaderFile />
     </ClCompile>
