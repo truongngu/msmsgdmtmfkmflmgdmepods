@@ -10,9 +10,9 @@ m_Color(0.0f, 0.0f, 0.0f), m_Tran(1.0f), m_IsProgress(false)
 	mPosition = Vector3(0.0f, 0.0f, 0.0f);
 	mScaleFactor = Vector3(1.0f, 1.0f, 1.0f);
 	mRotateAngles = Vector3(0.0f, 0.0f, 0.0f);
-	isHUD=false;
-	eslapedTime=0.0f;
-	isShowBound=false;
+	isHUD = false;
+	eslapedTime = 0.0f;
+	isShowBound = false;
 }
 
 Sprite::~Sprite(void)
@@ -82,18 +82,18 @@ int Sprite::Init(Texture* texture, float FPS, float width, float height, int num
 	this->mNumSprites = num_sprites;
 	this->mNumSpriteX = num_sprites_X;
 	this->mNumSpriteY = num_sprites_Y;
-	iCurrentFrame=0;
-	beginFrame=0;
-	lastFrame=mNumSprites;
-	mWidth=width;
-	mHeight=height;
+	iCurrentFrame = 0;
+	beginFrame = 0;
+	lastFrame = mNumSprites;
+	mWidth = width;
+	mHeight = height;
 	//mScaleFactor.x=width;
 	//mScaleFactor.y=height;
 	mBound.mWidth = width;
 	mBound.mHeight = height;
 	mBound.mShape = 0;
-	RectangleMesh* rec=new RectangleMesh(width,height,num_sprites_X,num_sprites_Y);
-	this->mModel=new Model2D(rec,texture);
+	RectangleMesh* rec = new RectangleMesh(width, height, num_sprites_X, num_sprites_Y);
+	this->mModel = new Model2D(rec, texture);
 	Init();
 	return 0;
 }
@@ -109,7 +109,7 @@ void Sprite::draw()
 		return;
 	/*if (mState == SpriteState::STOPPED)
 		return;*/
-	
+
 #if defined Win32 || defined Android
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -206,17 +206,66 @@ void Sprite::draw()
 
 #endif
 	}
+#if defined Win32 || defined Android
 	else if (mShader->u_MatrixMVP != -1)
 	{
 		//mScaleFactor=Vector3(100.0,100.0,10.0f);
 		world = GetWorldMatrix();
 		MVP = world;
 		//MVP.SetIdentity();
-#if defined Win32 || defined Android
 		glUniformMatrix4fv(mShader->u_MatrixMVP, 1, GL_FALSE, (float*)&MVP);
 #endif
+#if defined WindowPhone
+	else
+	{
+		
+		MVPConstantBuffer m_constantBufferData;
+		float tempz = mPosition.z;
+		float tempy = mPosition.y;
+		float tempx = mPosition.x;
+		//static float ttz = 0;
+		//mPosition.y = mPosition.x = ttz;
+		//mPosition.z = 1;
+		Matrix view = Global::currentCamera->ViewMatrix();
+		world = GetWorldMatrix();
+		MVP = world*view* Global::currentCamera->projection;
+
+		m_constantBufferData.MVP = MVP.Transpose();
+		mPosition.z = tempz;
+		mPosition.x = tempx;
+		mPosition.y = tempy;
+
+		m_constantBufferData.u_dxy = Vector4(dx, dy, 0, 0);
+		if (m_constantBuffer.Get() == NULL){
+			CD3D11_BUFFER_DESC constantBufferDesc(sizeof(MVPConstantBuffer), D3D11_BIND_CONSTANT_BUFFER);
+			DX::ThrowIfFailed(
+				Global::m_d3ddevice->CreateBuffer(
+				&constantBufferDesc,
+				nullptr,
+				&m_constantBuffer
+				)
+				);
+		}
+
+		m_d3dContext->UpdateSubresource(
+			m_constantBuffer.Get(),
+			0,
+			NULL,
+			&m_constantBufferData,
+			0,
+			0
+			);
+
+		m_d3dContext->VSSetConstantBuffers(
+			0,
+			1,
+			m_constantBuffer.GetAddressOf()
+			);
+
+		m_constantBuffer.ReleaseAndGetAddressOf();
+#endif
 	}
-	mModel->Draw(mShader);	
+	mModel->Draw(mShader);
 	if (isShowBound)
 		drawBound();
 }
@@ -225,18 +274,18 @@ void Sprite::update(float deltaTime)
 {
 	if (mState == SpriteState::STOPPED)
 	{
-		iCurrentFrame=0;
+		iCurrentFrame = 0;
 		//return;
 	}
 	else
 	{
 		eslapedTime += deltaTime;
-		if (eslapedTime > 1.0f/mFramesPerSec)
+		if (eslapedTime > 1.0f / mFramesPerSec)
 		{
-			eslapedTime=0;
+			eslapedTime = 0;
 			iCurrentFrame++;
-			if (iCurrentFrame>lastFrame)
-				iCurrentFrame=beginFrame;
+			if (iCurrentFrame > lastFrame)
+				iCurrentFrame = beginFrame;
 		}
 	}
 	int ix = iCurrentFrame % mNumSpriteX;
@@ -256,19 +305,19 @@ Sprite* Sprite::Create()
 
 void Sprite::CloneAttribute(Sprite* ins)
 {
-	ins->mModel=new Model2D(this->mModel->GetMesh(),this->mModel->GetTexture());
-	ins->mNumFrames=this->mNumFrames;
-	ins->mNumSprites=this->mNumSprites;
-	ins->mNumSpriteX=this->mNumSpriteX;
-	ins->mNumSpriteY=this->mNumSpriteY;
-	ins->mWidth=this->mWidth;
-	ins->mHeight=this->mHeight;
-	ins->mFramesPerSec=this->mFramesPerSec;
-	ins->beginFrame=this->beginFrame;
-	ins->lastFrame=this->lastFrame;
+	ins->mModel = new Model2D(this->mModel->GetMesh(), this->mModel->GetTexture());
+	ins->mNumFrames = this->mNumFrames;
+	ins->mNumSprites = this->mNumSprites;
+	ins->mNumSpriteX = this->mNumSpriteX;
+	ins->mNumSpriteY = this->mNumSpriteY;
+	ins->mWidth = this->mWidth;
+	ins->mHeight = this->mHeight;
+	ins->mFramesPerSec = this->mFramesPerSec;
+	ins->beginFrame = this->beginFrame;
+	ins->lastFrame = this->lastFrame;
 	ins->SetShader(this->mShader);
-	ins->iCurrentFrame=beginFrame;
-	ins->isCollisionable=this->isCollisionable;
+	ins->iCurrentFrame = beginFrame;
+	ins->isCollisionable = this->isCollisionable;
 	ins->mBound.mWidth = this->mBound.mWidth;
 	ins->mBound.mHeight = this->mBound.mHeight;
 	ins->mBound.mShape = 0;
@@ -276,20 +325,20 @@ void Sprite::CloneAttribute(Sprite* ins)
 
 Sprite* Sprite::Clone()
 {
-	Sprite* newSprite=new Sprite();
-	newSprite->mModel=new Model2D(this->mModel->GetMesh(),this->mModel->GetTexture());
-	newSprite->mNumFrames=this->mNumFrames;
-	newSprite->mNumSprites=this->mNumSprites;
-	newSprite->mNumSpriteX=this->mNumSpriteX;
-	newSprite->mNumSpriteY=this->mNumSpriteY;
-	newSprite->mWidth=this->mWidth;
-	newSprite->mHeight=this->mHeight;
-	newSprite->mFramesPerSec=this->mFramesPerSec;
-	newSprite->beginFrame=this->beginFrame;
-	newSprite->lastFrame=this->lastFrame;
+	Sprite* newSprite = new Sprite();
+	newSprite->mModel = new Model2D(this->mModel->GetMesh(), this->mModel->GetTexture());
+	newSprite->mNumFrames = this->mNumFrames;
+	newSprite->mNumSprites = this->mNumSprites;
+	newSprite->mNumSpriteX = this->mNumSpriteX;
+	newSprite->mNumSpriteY = this->mNumSpriteY;
+	newSprite->mWidth = this->mWidth;
+	newSprite->mHeight = this->mHeight;
+	newSprite->mFramesPerSec = this->mFramesPerSec;
+	newSprite->beginFrame = this->beginFrame;
+	newSprite->lastFrame = this->lastFrame;
 	newSprite->SetShader(this->mShader);
-	newSprite->iCurrentFrame=beginFrame;
-	newSprite->isCollisionable=this->isCollisionable;
+	newSprite->iCurrentFrame = beginFrame;
+	newSprite->isCollisionable = this->isCollisionable;
 	newSprite->mBound.mWidth = this->mBound.mWidth;
 	newSprite->mBound.mHeight = this->mBound.mHeight;
 	newSprite->mBound.mShape = 0;

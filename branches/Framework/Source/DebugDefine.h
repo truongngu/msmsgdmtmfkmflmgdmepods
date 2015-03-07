@@ -1,7 +1,12 @@
 //#define Win32
 //#define Android
 #define WindowPhone
+//#define WindowStore
 //#define iOS;
+
+#ifdef WindowStore
+#define WindowPhone
+#endif
 
 #if defined WindowPhone
 #define UNICODE
@@ -15,8 +20,15 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#define WindowPhoneWithXAML
-//#define WindowPhoneWithoutXAML
+
+typedef unsigned int     GLuint;
+typedef unsigned int     GLenum;
+typedef int              GLint;
+typedef float			 GLfloat;
+
+//#define WindowPhoneWithXAML
+#define WindowPhoneWithoutXAML
+
 #endif
 
 #define LogOut(s) {printf("Log : %s\n",s);}

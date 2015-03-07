@@ -9,6 +9,7 @@ float Entity2D::giatoc = 0.5f;
 float Entity2D::trongtruong = 9.8f;
 
 #ifdef WindowPhone
+Microsoft::WRL::ComPtr<ID3D11Buffer> Bound::m_vertexBuffer = nullptr;
 void Bound::Draw(float depth){
 	Vertex* verticesData = 0;
 	float width = mWidth;
@@ -57,11 +58,14 @@ void Bound::Draw(float depth){
 		}
 	}
 
+	Microsoft::WRL::ComPtr<ID3D11DeviceContext1> m_d3dContext;
+	Global::m_d3ddevice->GetImmediateContext1(&m_d3dContext);
+
 	D3D11_SUBRESOURCE_DATA vertexBufferData = { 0 };
 	vertexBufferData.pSysMem = verticesData;
 	vertexBufferData.SysMemPitch = 0;
 	vertexBufferData.SysMemSlicePitch = 0;
-	CD3D11_BUFFER_DESC vertexBufferDesc(sizeof(verticesData), D3D11_BIND_VERTEX_BUFFER);
+	CD3D11_BUFFER_DESC vertexBufferDesc(sizeof(Vertex)* numVertices, D3D11_BIND_VERTEX_BUFFER);
 	if (m_vertexBuffer.Get() == NULL){
 		DX::ThrowIfFailed(
 			Global::m_d3ddevice->CreateBuffer(
@@ -72,31 +76,9 @@ void Bound::Draw(float depth){
 			);
 	}
 	else{
-
+		m_d3dContext->UpdateSubresource(
+			m_vertexBuffer.Get(), 0, 0, verticesData, 0, 0);
 	}
-	unsigned short indices[] =
-	{
-		0, 1, 2,
-		3, 4, 5
-	};
-
-	D3D11_SUBRESOURCE_DATA indexBufferData = { 0 };
-	indexBufferData.pSysMem = indices;
-	indexBufferData.SysMemPitch = 0;
-	indexBufferData.SysMemSlicePitch = 0;
-	CD3D11_BUFFER_DESC indexBufferDesc(sizeof(indices), D3D11_BIND_INDEX_BUFFER);
-	int m_indexCount = ARRAYSIZE(indices);
-	if (m_indexBuffer.Get() == NULL){
-		DX::ThrowIfFailed(
-			Global::m_d3ddevice->CreateBuffer(
-			&indexBufferDesc,
-			&indexBufferData,
-			&m_indexBuffer
-			)
-			);
-	}
-	Microsoft::WRL::ComPtr<ID3D11DeviceContext1> m_d3dContext;
-	Global::m_d3ddevice->GetImmediateContext1(&m_d3dContext);
 
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
@@ -108,35 +90,9 @@ void Bound::Draw(float depth){
 		&offset
 		);
 
-	m_d3dContext->IASetIndexBuffer(
-		m_indexBuffer.Get(),
-		DXGI_FORMAT_R16_UINT,
-		0
-		);
-
 	m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);
 
-	/*m_d3dContext->DrawIndexed(
-	m_indexCount,
-	0,
-	0
-	);*/
-
-	/*m_vertexBuffer.Get()->Release();
-	m_indexBuffer.Get()->Release();
-	m_d3dContext->IASetVertexBuffers(
-	0,
-	1,
-	m_vertexBuffer.GetAddressOf(),
-	&stride,
-	&offset
-	);
-
-	m_d3dContext->IASetIndexBuffer(
-	m_indexBuffer.Get(),
-	DXGI_FORMAT_R16_UINT,
-	0
-	);*/
+	m_d3dContext->Draw(numVertices, 0);
 }
 #endif
 

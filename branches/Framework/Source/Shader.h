@@ -2,7 +2,7 @@
 #include <string>
 #include "DebugDefine.h"
 #include "Resource.h"
-#include "../Utilities/utilities.h"
+#include "Utilities/utilities.h"
 using namespace std;
 
 class Shaders:public Resource

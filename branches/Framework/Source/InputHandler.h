@@ -1,5 +1,5 @@
 #pragma once
-#include "../Utilities/utilities.h"
+#include "Utilities/utilities.h"
 #include "DebugDefine.h"
 
 enum Action
@@ -19,7 +19,7 @@ enum Action
 
 class InputHandler
 {
-#ifdef Win32
+#if defined Win32 || defined WindowStore
 private:
 	static bool KeyDown[255];
 	static bool KeyUp[255];

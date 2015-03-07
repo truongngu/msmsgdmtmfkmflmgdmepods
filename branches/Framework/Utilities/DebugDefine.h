@@ -2,8 +2,12 @@
 //#define Win32
 //#define Android
 #define WindowPhone
+//#define WindowStore
 //#define iOS;
 
+#ifdef WindowStore
+#define WindowPhone
+#endif 
 #pragma once
 
 #include "esUtil.h"

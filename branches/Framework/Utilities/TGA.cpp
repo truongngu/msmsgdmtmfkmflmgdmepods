@@ -1,5 +1,4 @@
 #include "DebugDefine.h"
-#include "stdafx.h"
 #include "TGA.h"
 #include <stdio.h>
 
