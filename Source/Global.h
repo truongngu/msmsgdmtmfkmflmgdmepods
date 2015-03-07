@@ -17,8 +17,11 @@ public:
 	static string gameResourceDir;
 	static string gameResourcePath;
 	static Shaders* BoundShader;
-#ifdef WindowPhone
+#if defined WindowPhone
 	static ID3D11Device1* m_d3ddevice;
+#endif
+#if defined Win32
+	static ESContext* esContext;
 #endif
 	static Shaders* TextShader;
 	static Shaders* TextShaderInWorld;

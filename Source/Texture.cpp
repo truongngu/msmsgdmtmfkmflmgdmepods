@@ -577,6 +577,24 @@ void Texture::Unrender()
 		m_d3dContext->DiscardResource(resourse.Get());
 		m_d3dContext->PSSetSamplers(0, 1, 0);
 		m_d3dContext->Unmap(resourse.Get(), 0);
+		/*m_d3dContext->IASetVertexBuffers(
+			0,
+			1,
+			0,0,0
+			);
+
+		m_d3dContext->IASetIndexBuffer(
+			0,
+			DXGI_FORMAT_R16_UINT,
+			0
+			);
+		m_d3dContext->VSSetShader(0, 0, 0);
+		m_d3dContext->PSSetShader(0, 0, 0);
+		m_d3dContext->VSSetConstantBuffers(
+			0,
+			1,
+			0
+			);*/
 #endif
 		break;
 	case TextureCube:

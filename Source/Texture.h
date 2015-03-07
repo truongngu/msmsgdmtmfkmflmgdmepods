@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "../Utilities/utilities.h"
+#include "Utilities/utilities.h"
 #include "Resource.h"
 #include "Shader.h"
 using namespace std;

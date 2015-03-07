@@ -1,4 +1,4 @@
-﻿Build started 2/1/2015 5:27:52 PM.
+﻿Build started 3/6/2015 4:07:29 PM.
      1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\Utilities\Utilities.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          G:\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Utilities\Math.cpp ..\..\Utilities\TGA.cpp ..\..\Utilities\esShader.cpp ..\..\Utilities\esUtil.cpp ..\..\Utilities\esUtil_win.cpp
@@ -21,4 +21,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.46
+Time Elapsed 00:00:12.49

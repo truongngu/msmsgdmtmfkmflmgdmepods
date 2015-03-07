@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "../Utilities/utilities.h"
+#include "Utilities/utilities.h"
 #include "Model2D.h"
 #include "Global.h"
 #include "Box2D.h"
@@ -31,7 +31,7 @@ struct Bound
 	float mHeight;
 	b2Shape* mShape;
 #if defined WindowPhone
-	Microsoft::WRL::ComPtr<ID3D11Buffer> m_vertexBuffer;
+	static Microsoft::WRL::ComPtr<ID3D11Buffer> m_vertexBuffer;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> m_indexBuffer;
 	Microsoft::WRL::ComPtr<ID3D11Buffer> m_constantBuffer;
 	void Draw(float depth);

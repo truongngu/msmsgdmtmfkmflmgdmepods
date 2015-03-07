@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "DebugDefine.h"
-#include "..\Utilities\utilities.h"
+#include "Utilities\utilities.h"
 using namespace std;
 
 

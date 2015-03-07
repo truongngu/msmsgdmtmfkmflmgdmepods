@@ -1,5 +1,26 @@
-﻿Build started 1/30/2015 8:34:32 PM.
+﻿Build started 3/3/2015 10:33:55 PM.
+     1>Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\Utilities\Utilities.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         G:\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\Utilities\Math.cpp ..\..\Utilities\TGA.cpp ..\..\Utilities\esShader.cpp ..\..\Utilities\esUtil.cpp ..\..\Utilities\esUtil_win.cpp
+         TGA.cpp
+         Math.cpp
+         Generating Code...
+         Compiling...
+         esUtil_win.cpp
+         esUtil.cpp
+         esShader.cpp
+         Generating Code...
+       Lib:
+         G:\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\Lib.exe /OUT:"E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\\BIN-ARM\Utilities.lib" /NOLOGO /MACHINE:ARM ARM\Debug\esShader.obj
+         ARM\Debug\esUtil.obj
+         ARM\Debug\esUtil_win.obj
+         ARM\Debug\Math.obj
+         ARM\Debug\stdafx.obj
+         ARM\Debug\TGA.obj
+         Utilities.vcxproj -> E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\\BIN-ARM\Utilities.lib
+     1>Done Building Project "E:\Backup\Study\3DProject\DirectX11-WinPhone\2DGameFramework - Build Cross-platform\2DGameFramework - WindowPhone\Utilities\Utilities.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.02
+Time Elapsed 00:00:02.18

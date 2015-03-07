@@ -4,7 +4,7 @@
 
 //Vector2
 
-GLfloat Vector2::Length()
+float Vector2::Length()
 {
 	return sqrt(x*x + y*y);
 }
@@ -13,7 +13,7 @@ Vector2 & Vector2::Normalize()
 {
 	if (Length() != 0)
 	{
-		GLfloat lenInv = 1.0f / Length();
+		float lenInv = 1.0f / Length();
 		x *= lenInv;
 		y *= lenInv;
 	}
@@ -51,12 +51,12 @@ Vector2 & Vector2::operator -= (Vector2 & vector)
 	return *this;
 }
 
-Vector2 Vector2::operator * (GLfloat k)
+Vector2 Vector2::operator * (float k)
 {
 	return Vector2(x * k, y * k);
 }
 
-Vector2 & Vector2::operator *= (GLfloat k)
+Vector2 & Vector2::operator *= (float k)
 {
 	x *= k;
 	y *= k;
@@ -64,13 +64,13 @@ Vector2 & Vector2::operator *= (GLfloat k)
 	return *this;
 }
 
-Vector2 Vector2::operator / (GLfloat k)
+Vector2 Vector2::operator / (float k)
 {
-	GLfloat kInv = 1.0f / k;
+	float kInv = 1.0f / k;
 	return Vector2(x * kInv, y * kInv);
 }
 
-Vector2 & Vector2::operator /= (GLfloat k)
+Vector2 & Vector2::operator /= (float k)
 {
 	return operator *= (1.0f / k);
 }
@@ -83,7 +83,7 @@ Vector2 & Vector2::operator = (Vector2 & vector)
 	return *this;
 }
 
-GLfloat Vector2::operator [] (unsigned int idx)
+float Vector2::operator [] (unsigned int idx)
 {
 	return (&x)[idx];
 }
@@ -93,14 +93,14 @@ Vector2 Vector2::Modulate(Vector2 & vector)
 	return Vector2(x * vector.x, y * vector.y);
 }
 
-GLfloat Vector2::Dot(Vector2 & vector)
+float Vector2::Dot(Vector2 & vector)
 {
 	return x * vector.x + y * vector.y;
 }
 
 //Vector3
 
-GLfloat Vector3::Length()
+float Vector3::Length()
 {
 	return sqrt(x*x + y*y + z*z);
 }
@@ -109,7 +109,7 @@ Vector3 & Vector3::Normalize()
 {
 	if (Length() != 0.0f)
 	{
-		GLfloat lenInv = 1.0f / Length();
+		float lenInv = 1.0f / Length();
 		x *= lenInv;
 		y *= lenInv;
 		z *= lenInv;
@@ -150,12 +150,12 @@ Vector3 & Vector3::operator -= (Vector3 & vector)
 	return *this;
 }
 
-Vector3 Vector3::operator * (GLfloat k)
+Vector3 Vector3::operator * (float k)
 {
 	return Vector3(x * k, y * k, z * k);
 }
 
-Vector3 & Vector3::operator *= (GLfloat k)
+Vector3 & Vector3::operator *= (float k)
 {
 	x *= k;
 	y *= k;
@@ -164,13 +164,13 @@ Vector3 & Vector3::operator *= (GLfloat k)
 	return *this;
 }
 
-Vector3 Vector3::operator / (GLfloat k)
+Vector3 Vector3::operator / (float k)
 {
-	GLfloat kInv = 1.0f / k;
+	float kInv = 1.0f / k;
 	return Vector3(x * kInv, y * kInv, z * kInv);
 }
 	
-Vector3 & Vector3::operator /= (GLfloat k)
+Vector3 & Vector3::operator /= (float k)
 {
 	return operator *= (1.0f / k);
 }
@@ -184,7 +184,7 @@ Vector3 & Vector3::operator = (Vector3 & vector)
 	return *this;
 }
 
-GLfloat Vector3::operator [] (unsigned int idx)
+float Vector3::operator [] (unsigned int idx)
 {
 	return (&x)[idx];
 }
@@ -194,7 +194,7 @@ Vector3 Vector3::Modulate(Vector3 & vector)
 	return Vector3(x * vector.x, y * vector.y, z * vector.z);
 }
 
-GLfloat Vector3::Dot(Vector3 & vector)
+float Vector3::Dot(Vector3 & vector)
 {
 	return x * vector.x + y * vector.y + z * vector.z;
 }
@@ -206,14 +206,14 @@ Vector3 Vector3::Cross(Vector3 & vector)
 
 //Vector4
 
-GLfloat Vector4::Length()
+float Vector4::Length()
 {
 	return sqrt(x*x + y*y + z*z + w*w);
 }
 
 Vector4 & Vector4::Normalize()
 {
-	GLfloat lenInv = 1.0f / Length();
+	float lenInv = 1.0f / Length();
 	x *= lenInv;
 	y *= lenInv;
 	z *= lenInv;
@@ -257,12 +257,12 @@ Vector4 & Vector4::operator -= (Vector4 & vector)
 	return *this;
 }
 
-Vector4 Vector4::operator * (GLfloat k)
+Vector4 Vector4::operator * (float k)
 {
 	return Vector4(x * k, y * k, z * k, w * k);
 }
 
-Vector4 & Vector4::operator *= (GLfloat k)
+Vector4 & Vector4::operator *= (float k)
 {
 	x *= k;
 	y *= k;
@@ -272,13 +272,13 @@ Vector4 & Vector4::operator *= (GLfloat k)
 	return *this;
 }
 
-Vector4 Vector4::operator / (GLfloat k)
+Vector4 Vector4::operator / (float k)
 {
-	GLfloat kInv = 1.0f / k;
+	float kInv = 1.0f / k;
 	return Vector4(x * kInv, y * kInv, z * kInv, w * kInv);
 }
 
-Vector4 & Vector4::operator /= (GLfloat k)
+Vector4 & Vector4::operator /= (float k)
 {
 	return operator *= (1.0f / k);
 }
@@ -292,7 +292,7 @@ Vector4 & Vector4::operator = (Vector4 & vector)
 	return *this;
 }
 
-GLfloat Vector4::operator [] (unsigned int idx)
+float Vector4::operator [] (unsigned int idx)
 {
 	return (&x)[idx];
 }
@@ -302,7 +302,7 @@ Vector4 Vector4::Modulate(Vector4 & vector)
 	return Vector4(x * vector.x, y * vector.y, z * vector.z, w * vector.w);
 }
 
-GLfloat Vector4::Dot(Vector4 & vector)
+float Vector4::Dot(Vector4 & vector)
 {
 	return x * vector.x + y * vector.y + z * vector.z + w * vector.w;
 }
@@ -322,7 +322,7 @@ Vector4 Vector4::operator * ( Matrix & m )
 
 //Matrix 4 X 4
 
-Matrix::Matrix(GLfloat val)
+Matrix::Matrix(float val)
 {
 	m[0][0] = val; m[0][1] = val; m[0][2] = val; m[0][3] = val;
 	m[1][0] = val; m[1][1] = val; m[1][2] = val; m[1][3] = val;
@@ -358,10 +358,10 @@ Matrix & Matrix::SetIdentity()
 	return *this;
 }
 
-Matrix & Matrix::SetRotationX(GLfloat angle)
+Matrix & Matrix::SetRotationX(float angle)
 {
-	GLfloat s = sinf(angle);
-	GLfloat c = cosf(angle);
+	float s = sinf(angle);
+	float c = cosf(angle);
 	m[0][0] = 1.0f; m[0][1] = 0.0f; m[0][2] = 0.0f; m[0][3] = 0.0f;
 	m[1][0] = 0.0f; m[1][1] =    c; m[1][2] =    s; m[1][3] = 0.0f;
 	m[2][0] = 0.0f; m[2][1] =   -s; m[2][2] =    c; m[2][3] = 0.0f;
@@ -369,10 +369,10 @@ Matrix & Matrix::SetRotationX(GLfloat angle)
 	return *this;
 }
 
-Matrix & Matrix::SetRotationY(GLfloat angle)
+Matrix & Matrix::SetRotationY(float angle)
 {
-	GLfloat s = sinf(angle);
-	GLfloat c = cosf(angle);
+	float s = sinf(angle);
+	float c = cosf(angle);
 	m[0][0] =    c; m[0][1] = 0.0f; m[0][2] =   -s; m[0][3] = 0.0f;
 	m[1][0] = 0.0f; m[1][1] = 1.0f; m[1][2] = 0.0f; m[1][3] = 0.0f;
 	m[2][0] =    s; m[2][1] = 0.0f; m[2][2] =    c; m[2][3] = 0.0f;
@@ -380,10 +380,10 @@ Matrix & Matrix::SetRotationY(GLfloat angle)
 	return *this;
 }
 
-Matrix & Matrix::SetRotationZ(GLfloat angle)
+Matrix & Matrix::SetRotationZ(float angle)
 {
-	GLfloat s = sinf(angle);
-	GLfloat c = cosf(angle);
+	float s = sinf(angle);
+	float c = cosf(angle);
 	m[0][0] =    c; m[0][1] =    s; m[0][2] = 0.0f; m[0][3] = 0.0f;
 	m[1][0] =   -s; m[1][1] =    c; m[1][2] = 0.0f; m[1][3] = 0.0f;
 	m[2][0] = 0.0f; m[2][1] = 0.0f; m[2][2] = 1.0f; m[2][3] = 0.0f;
@@ -445,7 +445,7 @@ Matrix & Matrix::SetRotationAngleAxis( float angle, float x, float y, float z )
 }
 
 
-Matrix & Matrix::SetScale(GLfloat scale)
+Matrix & Matrix::SetScale(float scale)
 {
 	m[0][0] = scale; m[0][1] = 0.0f;  m[0][2] = 0.0f;  m[0][3] = 0.0f;
 	m[1][0] = 0.0f;  m[1][1] = scale; m[1][2] = 0.0f;  m[1][3] = 0.0f;
@@ -455,7 +455,7 @@ Matrix & Matrix::SetScale(GLfloat scale)
 	return *this;
 }
 
-Matrix & Matrix::SetScale(GLfloat scaleX, GLfloat scaleY, GLfloat scaleZ)
+Matrix & Matrix::SetScale(float scaleX, float scaleY, float scaleZ)
 {
 	m[0][0] = scaleX; m[0][1] = 0.0f;   m[0][2] = 0.0f;   m[0][3] = 0.0f;
 	m[1][0] = 0.0f;   m[1][1] = scaleY; m[1][2] = 0.0f;   m[1][3] = 0.0f;
@@ -464,7 +464,7 @@ Matrix & Matrix::SetScale(GLfloat scaleX, GLfloat scaleY, GLfloat scaleZ)
 	return *this;
 }
 
-Matrix & Matrix::SetScale(GLfloat * pScale)
+Matrix & Matrix::SetScale(float * pScale)
 {
 	m[0][0] = pScale[0];   m[0][1] = 0.0f;        m[0][2] = 0.0f;        m[0][3] = 0.0f;
 	m[1][0] = 0.0f;        m[1][1] = pScale[1];   m[1][2] = 0.0f;        m[1][3] = 0.0f;
@@ -484,7 +484,7 @@ Matrix & Matrix::SetScale(Vector3 & scaleVec)
 	return *this;
 }
 
-Matrix & Matrix::SetTranslation(GLfloat x, GLfloat y, GLfloat z)
+Matrix & Matrix::SetTranslation(float x, float y, float z)
 {
 	m[0][0] = 1.0f; m[0][1] = 0.0f; m[0][2] = 0.0f; m[0][3] = 0.0f;
 	m[1][0] = 0.0f; m[1][1] = 1.0f; m[1][2] = 0.0f; m[1][3] = 0.0f;
@@ -494,7 +494,7 @@ Matrix & Matrix::SetTranslation(GLfloat x, GLfloat y, GLfloat z)
 	return *this;
 }
 
-Matrix & Matrix::SetTranslation( GLfloat *pTrans)
+Matrix & Matrix::SetTranslation( float *pTrans)
 {
 	m[0][0] = 1.0f;      m[0][1] = 0.0f;      m[0][2] = 0.0f;      m[0][3] = 0.0f;
 	m[1][0] = 0.0f;      m[1][1] = 1.0f;      m[1][2] = 0.0f;      m[1][3] = 0.0f;
@@ -514,12 +514,12 @@ Matrix & Matrix::SetTranslation( Vector3 &vec )
 	return *this;
 }
 
-Matrix & Matrix::SetPerspective(GLfloat fovY, GLfloat aspect, GLfloat nearPlane, GLfloat farPlane)
+Matrix & Matrix::SetPerspective(float fovY, float aspect, float nearPlane, float farPlane)
 {
-	GLfloat height = 2.0f * nearPlane * tanf(fovY * 0.5f);
-	GLfloat width = height * aspect;
-	GLfloat n2 = 2.0f * nearPlane;
-	GLfloat rcpnmf = 1.f / (nearPlane - farPlane);
+	float height = 2.0f * nearPlane * tanf(fovY * 0.5f);
+	float width = height * aspect;
+	float n2 = 2.0f * nearPlane;
+	float rcpnmf = 1.f / (nearPlane - farPlane);
 
 	m[0][0] = n2 / width;	
 	m[1][0] = 0;
@@ -614,14 +614,14 @@ Matrix Matrix::operator * (Matrix & mat)
 	return res;
 }
 
-Matrix Matrix::operator * (GLfloat k)
+Matrix Matrix::operator * (float k)
 {
 	Matrix mat( *this );
 	mat *= k;
 	return mat;
 }
 
-Matrix & Matrix::operator *= (GLfloat k)
+Matrix & Matrix::operator *= (float k)
 {
 	m[0][0] *= k; m[0][1] *= k; m[0][2] *= k; m[0][3] *= k;
 	m[1][0] *= k; m[1][1] *= k; m[1][2] *= k; m[1][3] *= k;
